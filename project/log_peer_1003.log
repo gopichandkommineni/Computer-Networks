@@ -1,0 +1,907 @@
+2020-12-04 14:17:36.154: Peer 1003 makes a connection to Peer 1002.
+2020-12-04 14:17:36.194: Peer 1003 makes a connection to Peer 1001.
+2020-12-04 14:17:36.375: Peer 1003 is unchoked by 1001.
+2020-12-04 14:17:36.407: Peer 1003 has downloaded the piece 0 from 1001.Now the number of pieces it has is 1
+2020-12-04 14:17:36.45: Peer 1003 received the 'have' message from 1002 for the piece 0.
+2020-12-04 14:17:36.48: Peer 1003 has downloaded the piece 1 from 1001.Now the number of pieces it has is 2
+2020-12-04 14:17:36.488: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.494: Peer 1003 received the 'have' message from 1002 for the piece 1.
+2020-12-04 14:17:36.494: Peer 1003 has downloaded the piece 2 from 1001.Now the number of pieces it has is 3
+2020-12-04 14:17:36.5: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.5: Peer 1003 has downloaded the piece 3 from 1001.Now the number of pieces it has is 4
+2020-12-04 14:17:36.506: Peer 1003 received the 'have' message from 1002 for the piece 2.
+2020-12-04 14:17:36.507: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.51: Peer 1003 received the 'have' message from 1002 for the piece 3.
+2020-12-04 14:17:36.511: Peer 1003 has downloaded the piece 4 from 1001.Now the number of pieces it has is 5
+2020-12-04 14:17:36.513: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.514: Peer 1003 received the 'have' message from 1002 for the piece 4.
+2020-12-04 14:17:36.514: Peer 1003 has downloaded the piece 5 from 1001.Now the number of pieces it has is 6
+2020-12-04 14:17:36.52: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.523: Peer 1003 has downloaded the piece 6 from 1001.Now the number of pieces it has is 7
+2020-12-04 14:17:36.523: Peer 1003 received the 'have' message from 1002 for the piece 5.
+2020-12-04 14:17:36.525: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.526: Peer 1003 has downloaded the piece 7 from 1001.Now the number of pieces it has is 8
+2020-12-04 14:17:36.531: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.532: Peer 1003 has downloaded the piece 8 from 1001.Now the number of pieces it has is 9
+2020-12-04 14:17:36.532: Peer 1003 received the 'have' message from 1002 for the piece 6.
+2020-12-04 14:17:36.533: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.536: Peer 1003 has downloaded the piece 9 from 1001.Now the number of pieces it has is 10
+2020-12-04 14:17:36.541: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.542: Peer 1003 received the 'have' message from 1002 for the piece 7.
+2020-12-04 14:17:36.544: Peer 1003 has downloaded the piece 10 from 1001.Now the number of pieces it has is 11
+2020-12-04 14:17:36.546: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.548: Peer 1003 has downloaded the piece 11 from 1001.Now the number of pieces it has is 12
+2020-12-04 14:17:36.549: Peer 1003 received the 'have' message from 1002 for the piece 8.
+2020-12-04 14:17:36.556: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.556: Peer 1003 has downloaded the piece 12 from 1001.Now the number of pieces it has is 13
+2020-12-04 14:17:36.559: Peer 1003 received the 'have' message from 1002 for the piece 9.
+2020-12-04 14:17:36.56: Peer 1003 has downloaded the piece 13 from 1001.Now the number of pieces it has is 14
+2020-12-04 14:17:36.56: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.562: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.567: Peer 1003 received the 'have' message from 1002 for the piece 10.
+2020-12-04 14:17:36.567: Peer 1003 has downloaded the piece 14 from 1001.Now the number of pieces it has is 15
+2020-12-04 14:17:36.57: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.571: Peer 1003 received the 'have' message from 1002 for the piece 11.
+2020-12-04 14:17:36.571: Peer 1003 has downloaded the piece 15 from 1001.Now the number of pieces it has is 16
+2020-12-04 14:17:36.574: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.577: Peer 1003 has downloaded the piece 16 from 1001.Now the number of pieces it has is 17
+2020-12-04 14:17:36.578: Peer 1003 received the 'have' message from 1002 for the piece 12.
+2020-12-04 14:17:36.578: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.58: Peer 1003 has downloaded the piece 17 from 1001.Now the number of pieces it has is 18
+2020-12-04 14:17:36.581: Peer 1003 received the 'have' message from 1002 for the piece 13.
+2020-12-04 14:17:36.581: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.584: Peer 1003 received the 'have' message from 1002 for the piece 14.
+2020-12-04 14:17:36.585: Peer 1003 has downloaded the piece 18 from 1001.Now the number of pieces it has is 19
+2020-12-04 14:17:36.59: Peer 1003 received the 'have' message from 1002 for the piece 15.
+2020-12-04 14:17:36.591: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.591: Peer 1003 has downloaded the piece 19 from 1001.Now the number of pieces it has is 20
+2020-12-04 14:17:36.596: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.596: Peer 1003 has downloaded the piece 20 from 1001.Now the number of pieces it has is 21
+2020-12-04 14:17:36.599: Peer 1003 received the 'have' message from 1002 for the piece 16.
+2020-12-04 14:17:36.602: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.604: Peer 1003 has downloaded the piece 21 from 1001.Now the number of pieces it has is 22
+2020-12-04 14:17:36.604: Peer 1003 received the 'have' message from 1002 for the piece 17.
+2020-12-04 14:17:36.606: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.607: Peer 1003 has downloaded the piece 22 from 1001.Now the number of pieces it has is 23
+2020-12-04 14:17:36.607: Peer 1003 received the 'have' message from 1002 for the piece 18.
+2020-12-04 14:17:36.608: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.609: Peer 1003 has downloaded the piece 23 from 1001.Now the number of pieces it has is 24
+2020-12-04 14:17:36.613: Peer 1003 received the 'have' message from 1002 for the piece 19.
+2020-12-04 14:17:36.615: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.616: Peer 1003 received the 'have' message from 1002 for the piece 20.
+2020-12-04 14:17:36.616: Peer 1003 has downloaded the piece 24 from 1001.Now the number of pieces it has is 25
+2020-12-04 14:17:36.617: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.62: Peer 1003 has downloaded the piece 25 from 1001.Now the number of pieces it has is 26
+2020-12-04 14:17:36.621: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.627: Peer 1003 received the 'have' message from 1002 for the piece 21.
+2020-12-04 14:17:36.627: Peer 1003 has downloaded the piece 26 from 1001.Now the number of pieces it has is 27
+2020-12-04 14:17:36.628: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.629: Peer 1003 received the 'have' message from 1002 for the piece 22.
+2020-12-04 14:17:36.629: Peer 1003 has downloaded the piece 27 from 1001.Now the number of pieces it has is 28
+2020-12-04 14:17:36.631: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.631: Peer 1003 received the 'have' message from 1002 for the piece 23.
+2020-12-04 14:17:36.632: Peer 1003 has downloaded the piece 28 from 1001.Now the number of pieces it has is 29
+2020-12-04 14:17:36.633: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.637: Peer 1003 received the 'have' message from 1002 for the piece 24.
+2020-12-04 14:17:36.638: Peer 1003 has downloaded the piece 29 from 1001.Now the number of pieces it has is 30
+2020-12-04 14:17:36.639: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.64: Peer 1003 received the 'have' message from 1002 for the piece 25.
+2020-12-04 14:17:36.64: Peer 1003 has downloaded the piece 30 from 1001.Now the number of pieces it has is 31
+2020-12-04 14:17:36.643: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.645: Peer 1003 received the 'have' message from 1002 for the piece 26.
+2020-12-04 14:17:36.645: Peer 1003 has downloaded the piece 31 from 1001.Now the number of pieces it has is 32
+2020-12-04 14:17:36.65: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.651: Peer 1003 received the 'have' message from 1002 for the piece 27.
+2020-12-04 14:17:36.651: Peer 1003 has downloaded the piece 32 from 1001.Now the number of pieces it has is 33
+2020-12-04 14:17:36.653: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.654: Peer 1003 received the 'have' message from 1002 for the piece 28.
+2020-12-04 14:17:36.655: Peer 1003 has downloaded the piece 33 from 1001.Now the number of pieces it has is 34
+2020-12-04 14:17:36.656: Peer 1003 received the 'have' message from 1002 for the piece 29.
+2020-12-04 14:17:36.657: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.657: Peer 1003 has downloaded the piece 34 from 1001.Now the number of pieces it has is 35
+2020-12-04 14:17:36.661: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.663: Peer 1003 received the 'have' message from 1002 for the piece 30.
+2020-12-04 14:17:36.663: Peer 1003 has downloaded the piece 35 from 1001.Now the number of pieces it has is 36
+2020-12-04 14:17:36.664: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.665: Peer 1003 has downloaded the piece 36 from 1001.Now the number of pieces it has is 37
+2020-12-04 14:17:36.666: Peer 1003 received the 'have' message from 1002 for the piece 31.
+2020-12-04 14:17:36.667: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.673: Peer 1003 received the 'have' message from 1002 for the piece 32.
+2020-12-04 14:17:36.673: Peer 1003 has downloaded the piece 37 from 1001.Now the number of pieces it has is 38
+2020-12-04 14:17:36.675: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.676: Peer 1003 received the 'have' message from 1002 for the piece 33.
+2020-12-04 14:17:36.676: Peer 1003 has downloaded the piece 38 from 1001.Now the number of pieces it has is 39
+2020-12-04 14:17:36.679: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.679: Peer 1003 received the 'have' message from 1002 for the piece 34.
+2020-12-04 14:17:36.68: Peer 1003 has downloaded the piece 39 from 1001.Now the number of pieces it has is 40
+2020-12-04 14:17:36.681: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.686: Peer 1003 received the 'have' message from 1002 for the piece 35.
+2020-12-04 14:17:36.686: Peer 1003 has downloaded the piece 40 from 1001.Now the number of pieces it has is 41
+2020-12-04 14:17:36.688: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.689: Peer 1003 received the 'have' message from 1002 for the piece 36.
+2020-12-04 14:17:36.69: Peer 1003 has downloaded the piece 41 from 1001.Now the number of pieces it has is 42
+2020-12-04 14:17:36.691: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.693: Peer 1003 received the 'have' message from 1002 for the piece 37.
+2020-12-04 14:17:36.693: Peer 1003 has downloaded the piece 42 from 1001.Now the number of pieces it has is 43
+2020-12-04 14:17:36.698: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.699: Peer 1003 has the optimistically unchoked neighbor 1002.
+2020-12-04 14:17:36.7: Peer 1003 has downloaded the piece 43 from 1001.Now the number of pieces it has is 44
+2020-12-04 14:17:36.7: Peer 1003 received the 'have' message from 1002 for the piece 38.
+2020-12-04 14:17:36.704: Peer 1003 received the 'have' message from 1002 for the piece 42.
+2020-12-04 14:17:36.704: Peer 1003 received the 'have' message from 1002 for the piece 39.
+2020-12-04 14:17:36.709: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.71: Peer 1003 has downloaded the piece 44 from 1001.Now the number of pieces it has is 45
+2020-12-04 14:17:36.71: Peer 1003 received the 'have' message from 1002 for the piece 40.
+2020-12-04 14:17:36.711: Peer 1003 received the 'have' message from 1002 for the piece 39.
+2020-12-04 14:17:36.713: Peer 1003 has downloaded the piece 45 from 1001.Now the number of pieces it has is 46
+2020-12-04 14:17:36.713: Peer 1003 received the 'have' message from 1002 for the piece 41.
+2020-12-04 14:17:36.714: Peer 1003 received the 'have' message from 1002 for the piece 40.
+2020-12-04 14:17:36.716: Peer 1003 received the 'have' message from 1002 for the piece 43.
+2020-12-04 14:17:36.716: Peer 1003 has downloaded the piece 46 from 1001.Now the number of pieces it has is 47
+2020-12-04 14:17:36.716: Peer 1003 received the 'have' message from 1002 for the piece 43.
+2020-12-04 14:17:36.721: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.722: Peer 1003 received the 'have' message from 1002 for the piece 41.
+2020-12-04 14:17:36.722: Peer 1003 has downloaded the piece 47 from 1001.Now the number of pieces it has is 48
+2020-12-04 14:17:36.723: Peer 1003 received the 'have' message from 1002 for the piece 44.
+2020-12-04 14:17:36.724: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.725: Peer 1003 has downloaded the piece 48 from 1001.Now the number of pieces it has is 49
+2020-12-04 14:17:36.725: Peer 1003 received the 'have' message from 1002 for the piece 43.
+2020-12-04 14:17:36.725: Peer 1003 received the 'have' message from 1002 for the piece 45.
+2020-12-04 14:17:36.727: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.728: Peer 1003 has downloaded the piece 49 from 1001.Now the number of pieces it has is 50
+2020-12-04 14:17:36.731: Peer 1003 received the 'have' message from 1002 for the piece 44.
+2020-12-04 14:17:36.732: Peer 1003 received the 'have' message from 1002 for the piece 46.
+2020-12-04 14:17:36.733: Peer 1003 received the 'have' message from 1002 for the piece 44.
+2020-12-04 14:17:36.734: Peer 1003 has downloaded the piece 50 from 1001.Now the number of pieces it has is 51
+2020-12-04 14:17:36.735: Peer 1003 received the 'have' message from 1002 for the piece 47.
+2020-12-04 14:17:36.736: Peer 1003 received the 'have' message from 1002 for the piece 45.
+2020-12-04 14:17:36.737: Peer 1003 received the 'have' message from 1002 for the piece 48.
+2020-12-04 14:17:36.737: Peer 1003 has downloaded the piece 51 from 1001.Now the number of pieces it has is 52
+2020-12-04 14:17:36.738: Peer 1003 received the 'have' message from 1002 for the piece 45.
+2020-12-04 14:17:36.743: Peer 1003 received the 'have' message from 1002 for the piece 49.
+2020-12-04 14:17:36.744: Peer 1003 received the 'have' message from 1002 for the piece 46.
+2020-12-04 14:17:36.744: Peer 1003 has downloaded the piece 52 from 1001.Now the number of pieces it has is 53
+2020-12-04 14:17:36.745: Peer 1003 received the 'have' message from 1002 for the piece 50.
+2020-12-04 14:17:36.746: Peer 1003 received the 'have' message from 1002 for the piece 46.
+2020-12-04 14:17:36.746: Peer 1003 has downloaded the piece 53 from 1001.Now the number of pieces it has is 54
+2020-12-04 14:17:36.748: Peer 1003 received the 'have' message from 1002 for the piece 46.
+2020-12-04 14:17:36.748: Peer 1003 received the 'have' message from 1002 for the piece 51.
+2020-12-04 14:17:36.749: Peer 1003 has downloaded the piece 54 from 1001.Now the number of pieces it has is 55
+2020-12-04 14:17:36.75: Peer 1003 received the 'have' message from 1002 for the piece 47.
+2020-12-04 14:17:36.755: Peer 1003 received the 'have' message from 1002 for the piece 52.
+2020-12-04 14:17:36.755: Peer 1003 received the 'have' message from 1002 for the piece 48.
+2020-12-04 14:17:36.755: Peer 1003 has downloaded the piece 55 from 1001.Now the number of pieces it has is 56
+2020-12-04 14:17:36.757: Peer 1003 received the 'have' message from 1002 for the piece 53.
+2020-12-04 14:17:36.758: Peer 1003 received the 'have' message from 1002 for the piece 49.
+2020-12-04 14:17:36.758: Peer 1003 has downloaded the piece 56 from 1001.Now the number of pieces it has is 57
+2020-12-04 14:17:36.76: Peer 1003 received the 'have' message from 1002 for the piece 54.
+2020-12-04 14:17:36.761: Peer 1003 received the 'have' message from 1002 for the piece 50.
+2020-12-04 14:17:36.761: Peer 1003 has downloaded the piece 57 from 1001.Now the number of pieces it has is 58
+2020-12-04 14:17:36.762: Peer 1003 received the 'have' message from 1002 for the piece 51.
+2020-12-04 14:17:36.762: Peer 1003 received the 'have' message from 1002 for the piece 55.
+2020-12-04 14:17:36.77: Peer 1003 has downloaded the piece 58 from 1001.Now the number of pieces it has is 59
+2020-12-04 14:17:36.77: Peer 1003 received the 'have' message from 1002 for the piece 52.
+2020-12-04 14:17:36.772: Peer 1003 has downloaded the piece 59 from 1001.Now the number of pieces it has is 60
+2020-12-04 14:17:36.772: Peer 1003 received the 'have' message from 1002 for the piece 56.
+2020-12-04 14:17:36.772: Peer 1003 received the 'have' message from 1002 for the piece 52.
+2020-12-04 14:17:36.778: Peer 1003 has downloaded the piece 60 from 1001.Now the number of pieces it has is 61
+2020-12-04 14:17:36.779: Peer 1003 received the 'have' message from 1002 for the piece 57.
+2020-12-04 14:17:36.78: Peer 1003 received the 'have' message from 1002 for the piece 53.
+2020-12-04 14:17:36.781: Peer 1003 has downloaded the piece 61 from 1001.Now the number of pieces it has is 62
+2020-12-04 14:17:36.783: Peer 1003 received the 'have' message from 1002 for the piece 58.
+2020-12-04 14:17:36.784: Peer 1003 received the 'have' message from 1002 for the piece 54.
+2020-12-04 14:17:36.784: Peer 1003 has downloaded the piece 62 from 1001.Now the number of pieces it has is 63
+2020-12-04 14:17:36.79: Peer 1003 received the 'have' message from 1002 for the piece 59.
+2020-12-04 14:17:36.79: Peer 1003 received the 'have' message from 1002 for the piece 55.
+2020-12-04 14:17:36.791: Peer 1003 has downloaded the piece 63 from 1001.Now the number of pieces it has is 64
+2020-12-04 14:17:36.792: Peer 1003 received the 'have' message from 1002 for the piece 60.
+2020-12-04 14:17:36.793: Peer 1003 received the 'have' message from 1002 for the piece 56.
+2020-12-04 14:17:36.795: Peer 1003 has downloaded the piece 64 from 1001.Now the number of pieces it has is 65
+2020-12-04 14:17:36.796: Peer 1003 received the 'have' message from 1002 for the piece 61.
+2020-12-04 14:17:36.797: Peer 1003 received the 'have' message from 1002 for the piece 56.
+2020-12-04 14:17:36.803: Peer 1003 has downloaded the piece 65 from 1001.Now the number of pieces it has is 66
+2020-12-04 14:17:36.803: Peer 1003 received the 'have' message from 1002 for the piece 62.
+2020-12-04 14:17:36.804: Peer 1003 received the 'have' message from 1002 for the piece 57.
+2020-12-04 14:17:36.806: Peer 1003 has downloaded the piece 66 from 1001.Now the number of pieces it has is 67
+2020-12-04 14:17:36.807: Peer 1003 received the 'have' message from 1002 for the piece 63.
+2020-12-04 14:17:36.807: Peer 1003 received the 'have' message from 1002 for the piece 58.
+2020-12-04 14:17:36.811: Peer 1003 received the 'have' message from 1002 for the piece 59.
+2020-12-04 14:17:36.812: Peer 1003 has downloaded the piece 67 from 1001.Now the number of pieces it has is 68
+2020-12-04 14:17:36.813: Peer 1003 received the 'have' message from 1002 for the piece 64.
+2020-12-04 14:17:36.813: Peer 1003 received the 'have' message from 1002 for the piece 60.
+2020-12-04 14:17:36.814: Peer 1003 has downloaded the piece 68 from 1001.Now the number of pieces it has is 69
+2020-12-04 14:17:36.815: Peer 1003 received the 'have' message from 1002 for the piece 65.
+2020-12-04 14:17:36.816: Peer 1003 has downloaded the piece 69 from 1001.Now the number of pieces it has is 70
+2020-12-04 14:17:36.816: Peer 1003 received the 'have' message from 1002 for the piece 61.
+2020-12-04 14:17:36.818: Peer 1003 has downloaded the piece 70 from 1001.Now the number of pieces it has is 71
+2020-12-04 14:17:36.819: Peer 1003 received the 'have' message from 1002 for the piece 66.
+2020-12-04 14:17:36.823: Peer 1003 received the 'have' message from 1002 for the piece 62.
+2020-12-04 14:17:36.825: Peer 1003 has downloaded the piece 71 from 1001.Now the number of pieces it has is 72
+2020-12-04 14:17:36.825: Peer 1003 received the 'have' message from 1002 for the piece 67.
+2020-12-04 14:17:36.826: Peer 1003 received the 'have' message from 1002 for the piece 63.
+2020-12-04 14:17:36.827: Peer 1003 received the 'have' message from 1002 for the piece 68.
+2020-12-04 14:17:36.827: Peer 1003 has downloaded the piece 72 from 1001.Now the number of pieces it has is 73
+2020-12-04 14:17:36.828: Peer 1003 received the 'have' message from 1002 for the piece 64.
+2020-12-04 14:17:36.83: Peer 1003 has downloaded the piece 73 from 1001.Now the number of pieces it has is 74
+2020-12-04 14:17:36.831: Peer 1003 received the 'have' message from 1002 for the piece 69.
+2020-12-04 14:17:36.837: Peer 1003 received the 'have' message from 1002 for the piece 64.
+2020-12-04 14:17:36.838: Peer 1003 received the 'have' message from 1002 for the piece 70.
+2020-12-04 14:17:36.839: Peer 1003 has downloaded the piece 74 from 1001.Now the number of pieces it has is 75
+2020-12-04 14:17:36.839: Peer 1003 received the 'have' message from 1002 for the piece 65.
+2020-12-04 14:17:36.841: Peer 1003 received the 'have' message from 1002 for the piece 66.
+2020-12-04 14:17:36.841: Peer 1003 has downloaded the piece 75 from 1001.Now the number of pieces it has is 76
+2020-12-04 14:17:36.842: Peer 1003 received the 'have' message from 1002 for the piece 71.
+2020-12-04 14:17:36.844: Peer 1003 received the 'have' message from 1002 for the piece 67.
+2020-12-04 14:17:36.844: Peer 1003 received the 'have' message from 1002 for the piece 72.
+2020-12-04 14:17:36.85: Peer 1003 has downloaded the piece 76 from 1001.Now the number of pieces it has is 77
+2020-12-04 14:17:36.852: Peer 1003 received the 'have' message from 1002 for the piece 68.
+2020-12-04 14:17:36.854: Peer 1003 received the 'have' message from 1002 for the piece 73.
+2020-12-04 14:17:36.854: Peer 1003 has downloaded the piece 77 from 1001.Now the number of pieces it has is 78
+2020-12-04 14:17:36.857: Peer 1003 received the 'have' message from 1002 for the piece 69.
+2020-12-04 14:17:36.863: Peer 1003 received the 'have' message from 1002 for the piece 74.
+2020-12-04 14:17:36.863: Peer 1003 has downloaded the piece 78 from 1001.Now the number of pieces it has is 79
+2020-12-04 14:17:36.863: Peer 1003 received the 'have' message from 1002 for the piece 70.
+2020-12-04 14:17:36.867: Peer 1003 received the 'have' message from 1002 for the piece 75.
+2020-12-04 14:17:36.867: Peer 1003 received the 'have' message from 1002 for the piece 71.
+2020-12-04 14:17:36.867: Peer 1003 has downloaded the piece 79 from 1001.Now the number of pieces it has is 80
+2020-12-04 14:17:36.874: Peer 1003 received the 'have' message from 1002 for the piece 72.
+2020-12-04 14:17:36.874: Peer 1003 received the 'have' message from 1002 for the piece 76.
+2020-12-04 14:17:36.874: Peer 1003 has downloaded the piece 80 from 1001.Now the number of pieces it has is 81
+2020-12-04 14:17:36.876: Peer 1003 received the 'have' message from 1002 for the piece 73.
+2020-12-04 14:17:36.877: Peer 1003 has downloaded the piece 81 from 1001.Now the number of pieces it has is 82
+2020-12-04 14:17:36.878: Peer 1003 received the 'have' message from 1002 for the piece 74.
+2020-12-04 14:17:36.879: Peer 1003 received the 'have' message from 1002 for the piece 77.
+2020-12-04 14:17:36.879: Peer 1003 has downloaded the piece 82 from 1001.Now the number of pieces it has is 83
+2020-12-04 14:17:36.884: Peer 1003 received the 'have' message from 1002 for the piece 74.
+2020-12-04 14:17:36.886: Peer 1003 received the 'have' message from 1002 for the piece 78.
+2020-12-04 14:17:36.886: Peer 1003 has downloaded the piece 83 from 1001.Now the number of pieces it has is 84
+2020-12-04 14:17:36.887: Peer 1003 received the 'have' message from 1002 for the piece 75.
+2020-12-04 14:17:36.888: Peer 1003 received the 'have' message from 1002 for the piece 79.
+2020-12-04 14:17:36.889: Peer 1003 has downloaded the piece 84 from 1001.Now the number of pieces it has is 85
+2020-12-04 14:17:36.889: Peer 1003 received the 'have' message from 1002 for the piece 76.
+2020-12-04 14:17:36.891: Peer 1003 has downloaded the piece 85 from 1001.Now the number of pieces it has is 86
+2020-12-04 14:17:36.891: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.892: Peer 1003 received the 'have' message from 1002 for the piece 80.
+2020-12-04 14:17:36.896: Peer 1003 received the 'have' message from 1002 for the piece 77.
+2020-12-04 14:17:36.897: Peer 1003 has downloaded the piece 86 from 1001.Now the number of pieces it has is 87
+2020-12-04 14:17:36.898: Peer 1003 received the 'have' message from 1002 for the piece 81.
+2020-12-04 14:17:36.899: Peer 1003 received the 'have' message from 1002 for the piece 77.
+2020-12-04 14:17:36.9: Peer 1003 has downloaded the piece 87 from 1001.Now the number of pieces it has is 88
+2020-12-04 14:17:36.9: Peer 1003 received the 'interested' messaging from 1002.
+2020-12-04 14:17:36.901: Peer 1003 received the 'have' message from 1002 for the piece 82.
+2020-12-04 14:17:36.902: Peer 1003 received the 'have' message from 1002 for the piece 78.
+2020-12-04 14:17:36.903: Peer 1003 has downloaded the piece 88 from 1001.Now the number of pieces it has is 89
+2020-12-04 14:17:36.904: Peer 1003 received the 'have' message from 1002 for the piece 83.
+2020-12-04 14:17:36.908: Peer 1003 received the 'have' message from 1002 for the piece 78.
+2020-12-04 14:17:36.908: Peer 1003 has downloaded the piece 89 from 1001.Now the number of pieces it has is 90
+2020-12-04 14:17:36.91: Peer 1003 received the 'have' message from 1002 for the piece 84.
+2020-12-04 14:17:36.91: Peer 1003 received the 'have' message from 1002 for the piece 79.
+2020-12-04 14:17:36.911: Peer 1003 has downloaded the piece 90 from 1001.Now the number of pieces it has is 91
+2020-12-04 14:17:36.912: Peer 1003 received the 'have' message from 1002 for the piece 85.
+2020-12-04 14:17:36.912: Peer 1003 received the 'have' message from 1002 for the piece 80.
+2020-12-04 14:17:36.914: Peer 1003 received the 'have' message from 1002 for the piece 86.
+2020-12-04 14:17:36.914: Peer 1003 has downloaded the piece 91 from 1001.Now the number of pieces it has is 92
+2020-12-04 14:17:36.915: Peer 1003 received the 'have' message from 1002 for the piece 80.
+2020-12-04 14:17:36.92: Peer 1003 has downloaded the piece 92 from 1001.Now the number of pieces it has is 93
+2020-12-04 14:17:36.92: Peer 1003 received the 'have' message from 1002 for the piece 87.
+2020-12-04 14:17:36.921: Peer 1003 received the 'have' message from 1002 for the piece 81.
+2020-12-04 14:17:36.922: Peer 1003 has downloaded the piece 93 from 1001.Now the number of pieces it has is 94
+2020-12-04 14:17:36.922: Peer 1003 received the 'have' message from 1002 for the piece 88.
+2020-12-04 14:17:36.923: Peer 1003 received the 'have' message from 1002 for the piece 82.
+2020-12-04 14:17:36.924: Peer 1003 received the 'have' message from 1002 for the piece 89.
+2020-12-04 14:17:36.925: Peer 1003 has downloaded the piece 94 from 1001.Now the number of pieces it has is 95
+2020-12-04 14:17:36.925: Peer 1003 received the 'have' message from 1002 for the piece 82.
+2020-12-04 14:17:36.927: Peer 1003 received the 'have' message from 1002 for the piece 90.
+2020-12-04 14:17:36.927: Peer 1003 received the 'have' message from 1002 for the piece 83.
+2020-12-04 14:17:36.927: Peer 1003 has downloaded the piece 95 from 1001.Now the number of pieces it has is 96
+2020-12-04 14:17:36.932: Peer 1003 received the 'have' message from 1002 for the piece 84.
+2020-12-04 14:17:36.932: Peer 1003 received the 'have' message from 1002 for the piece 91.
+2020-12-04 14:17:36.933: Peer 1003 has downloaded the piece 96 from 1001.Now the number of pieces it has is 97
+2020-12-04 14:17:36.934: Peer 1003 received the 'have' message from 1002 for the piece 85.
+2020-12-04 14:17:36.935: Peer 1003 received the 'have' message from 1002 for the piece 92.
+2020-12-04 14:17:36.937: Peer 1003 has downloaded the piece 97 from 1001.Now the number of pieces it has is 98
+2020-12-04 14:17:36.937: Peer 1003 received the 'have' message from 1002 for the piece 86.
+2020-12-04 14:17:36.941: Peer 1003 received the 'have' message from 1002 for the piece 93.
+2020-12-04 14:17:36.942: Peer 1003 has downloaded the piece 98 from 1001.Now the number of pieces it has is 99
+2020-12-04 14:17:36.942: Peer 1003 received the 'have' message from 1002 for the piece 87.
+2020-12-04 14:17:36.945: Peer 1003 received the 'have' message from 1002 for the piece 94.
+2020-12-04 14:17:36.946: Peer 1003 received the 'have' message from 1002 for the piece 88.
+2020-12-04 14:17:36.946: Peer 1003 has downloaded the piece 99 from 1001.Now the number of pieces it has is 100
+2020-12-04 14:17:36.956: Peer 1003 received the 'have' message from 1002 for the piece 95.
+2020-12-04 14:17:36.956: Peer 1003 received the 'have' message from 1002 for the piece 89.
+2020-12-04 14:17:36.957: Peer 1003 has downloaded the piece 100 from 1001.Now the number of pieces it has is 101
+2020-12-04 14:17:36.958: Peer 1003 received the 'have' message from 1002 for the piece 96.
+2020-12-04 14:17:36.958: Peer 1003 received the 'have' message from 1002 for the piece 90.
+2020-12-04 14:17:36.959: Peer 1003 has downloaded the piece 101 from 1001.Now the number of pieces it has is 102
+2020-12-04 14:17:36.96: Peer 1003 received the 'have' message from 1002 for the piece 97.
+2020-12-04 14:17:36.961: Peer 1003 received the 'have' message from 1002 for the piece 91.
+2020-12-04 14:17:36.962: Peer 1003 has downloaded the piece 102 from 1001.Now the number of pieces it has is 103
+2020-12-04 14:17:36.966: Peer 1003 received the 'have' message from 1002 for the piece 92.
+2020-12-04 14:17:36.967: Peer 1003 received the 'have' message from 1002 for the piece 98.
+2020-12-04 14:17:36.969: Peer 1003 has downloaded the piece 103 from 1001.Now the number of pieces it has is 104
+2020-12-04 14:17:36.97: Peer 1003 received the 'have' message from 1002 for the piece 93.
+2020-12-04 14:17:36.97: Peer 1003 received the 'have' message from 1002 for the piece 99.
+2020-12-04 14:17:36.972: Peer 1003 has downloaded the piece 104 from 1001.Now the number of pieces it has is 105
+2020-12-04 14:17:36.973: Peer 1003 received the 'have' message from 1002 for the piece 100.
+2020-12-04 14:17:36.973: Peer 1003 received the 'have' message from 1002 for the piece 93.
+2020-12-04 14:17:36.974: Peer 1003 received the 'have' message from 1002 for the piece 94.
+2020-12-04 14:17:36.978: Peer 1003 received the 'have' message from 1002 for the piece 101.
+2020-12-04 14:17:36.978: Peer 1003 has downloaded the piece 105 from 1001.Now the number of pieces it has is 106
+2020-12-04 14:17:36.979: Peer 1003 received the 'have' message from 1002 for the piece 95.
+2020-12-04 14:17:36.98: Peer 1003 received the 'have' message from 1002 for the piece 102.
+2020-12-04 14:17:36.98: Peer 1003 received the 'have' message from 1002 for the piece 96.
+2020-12-04 14:17:36.981: Peer 1003 has downloaded the piece 106 from 1001.Now the number of pieces it has is 107
+2020-12-04 14:17:36.982: Peer 1003 received the 'have' message from 1002 for the piece 97.
+2020-12-04 14:17:36.982: Peer 1003 received the 'have' message from 1002 for the piece 103.
+2020-12-04 14:17:36.983: Peer 1003 has downloaded the piece 107 from 1001.Now the number of pieces it has is 108
+2020-12-04 14:17:36.985: Peer 1003 received the 'have' message from 1002 for the piece 98.
+2020-12-04 14:17:36.989: Peer 1003 received the 'have' message from 1002 for the piece 104.
+2020-12-04 14:17:36.99: Peer 1003 received the 'have' message from 1002 for the piece 99.
+2020-12-04 14:17:36.99: Peer 1003 has downloaded the piece 108 from 1001.Now the number of pieces it has is 109
+2020-12-04 14:17:36.991: Peer 1003 received the 'have' message from 1002 for the piece 105.
+2020-12-04 14:17:36.992: Peer 1003 has downloaded the piece 109 from 1001.Now the number of pieces it has is 110
+2020-12-04 14:17:36.993: Peer 1003 received the 'have' message from 1002 for the piece 100.
+2020-12-04 14:17:36.995: Peer 1003 received the 'have' message from 1002 for the piece 106.
+2020-12-04 14:17:36.995: Peer 1003 has downloaded the piece 110 from 1001.Now the number of pieces it has is 111
+2020-12-04 14:17:36.996: Peer 1003 received the 'have' message from 1002 for the piece 101.
+2020-12-04 14:17:37.0: Peer 1003 received the 'have' message from 1002 for the piece 107.
+2020-12-04 14:17:37.0: Peer 1003 has downloaded the piece 111 from 1001.Now the number of pieces it has is 112
+2020-12-04 14:17:37.001: Peer 1003 received the 'have' message from 1002 for the piece 102.
+2020-12-04 14:17:37.003: Peer 1003 has downloaded the piece 112 from 1001.Now the number of pieces it has is 113
+2020-12-04 14:17:37.003: Peer 1003 received the 'have' message from 1002 for the piece 108.
+2020-12-04 14:17:37.004: Peer 1003 received the 'have' message from 1002 for the piece 102.
+2020-12-04 14:17:37.006: Peer 1003 has downloaded the piece 113 from 1001.Now the number of pieces it has is 114
+2020-12-04 14:17:37.006: Peer 1003 received the 'have' message from 1002 for the piece 103.
+2020-12-04 14:17:37.007: Peer 1003 received the 'have' message from 1002 for the piece 109.
+2020-12-04 14:17:37.007: Peer 1003 received the 'have' message from 1002 for the piece 104.
+2020-12-04 14:17:37.011: Peer 1003 has downloaded the piece 114 from 1001.Now the number of pieces it has is 115
+2020-12-04 14:17:37.011: Peer 1003 received the 'have' message from 1002 for the piece 104.
+2020-12-04 14:17:37.011: Peer 1003 received the 'have' message from 1002 for the piece 110.
+2020-12-04 14:17:37.013: Peer 1003 received the 'have' message from 1002 for the piece 105.
+2020-12-04 14:17:37.013: Peer 1003 has downloaded the piece 115 from 1001.Now the number of pieces it has is 116
+2020-12-04 14:17:37.015: Peer 1003 received the 'have' message from 1002 for the piece 111.
+2020-12-04 14:17:37.015: Peer 1003 received the 'have' message from 1002 for the piece 106.
+2020-12-04 14:17:37.015: Peer 1003 has downloaded the piece 116 from 1001.Now the number of pieces it has is 117
+2020-12-04 14:17:37.017: Peer 1003 received the 'have' message from 1002 for the piece 112.
+2020-12-04 14:17:37.017: Peer 1003 received the 'have' message from 1002 for the piece 107.
+2020-12-04 14:17:37.017: Peer 1003 has downloaded the piece 117 from 1001.Now the number of pieces it has is 118
+2020-12-04 14:17:37.023: Peer 1003 received the 'have' message from 1002 for the piece 108.
+2020-12-04 14:17:37.024: Peer 1003 received the 'have' message from 1002 for the piece 113.
+2020-12-04 14:17:37.024: Peer 1003 has downloaded the piece 118 from 1001.Now the number of pieces it has is 119
+2020-12-04 14:17:37.027: Peer 1003 received the 'have' message from 1002 for the piece 109.
+2020-12-04 14:17:37.034: Peer 1003 received the 'have' message from 1002 for the piece 114.
+2020-12-04 14:17:37.037: Peer 1003 has downloaded the piece 119 from 1001.Now the number of pieces it has is 120
+2020-12-04 14:17:37.037: Peer 1003 received the 'have' message from 1002 for the piece 109.
+2020-12-04 14:17:37.042: Peer 1003 received the 'have' message from 1002 for the piece 110.
+2020-12-04 14:17:37.044: Peer 1003 received the 'have' message from 1002 for the piece 115.
+2020-12-04 14:17:37.044: Peer 1003 has downloaded the piece 120 from 1001.Now the number of pieces it has is 121
+2020-12-04 14:17:37.049: Peer 1003 received the 'have' message from 1002 for the piece 111.
+2020-12-04 14:17:37.052: Peer 1003 has downloaded the piece 121 from 1001.Now the number of pieces it has is 122
+2020-12-04 14:17:37.053: Peer 1003 received the 'have' message from 1002 for the piece 116.
+2020-12-04 14:17:37.053: Peer 1003 received the 'have' message from 1002 for the piece 111.
+2020-12-04 14:17:37.055: Peer 1003 has downloaded the piece 122 from 1001.Now the number of pieces it has is 123
+2020-12-04 14:17:37.056: Peer 1003 received the 'have' message from 1002 for the piece 117.
+2020-12-04 14:17:37.061: Peer 1003 received the 'have' message from 1002 for the piece 112.
+2020-12-04 14:17:37.061: Peer 1003 has downloaded the piece 123 from 1001.Now the number of pieces it has is 124
+2020-12-04 14:17:37.063: Peer 1003 received the 'have' message from 1002 for the piece 118.
+2020-12-04 14:17:37.065: Peer 1003 received the 'have' message from 1002 for the piece 119.
+2020-12-04 14:17:37.065: Peer 1003 has downloaded the piece 124 from 1001.Now the number of pieces it has is 125
+2020-12-04 14:17:37.067: Peer 1003 received the 'have' message from 1002 for the piece 113.
+2020-12-04 14:17:37.121: Peer 1003 received the 'have' message from 1002 for the piece 120.
+2020-12-04 14:17:37.122: Peer 1003 received the 'have' message from 1002 for the piece 113.
+2020-12-04 14:17:37.127: Peer 1003 received the 'have' message from 1002 for the piece 121.
+2020-12-04 14:17:37.129: Peer 1003 received the 'have' message from 1002 for the piece 122.
+2020-12-04 14:17:37.132: Peer 1003 received the 'have' message from 1002 for the piece 123.
+2020-12-04 14:17:37.132: Peer 1003 received the 'have' message from 1002 for the piece 114.
+2020-12-04 14:17:37.137: Peer 1003 received the 'have' message from 1002 for the piece 124.
+2020-12-04 14:17:37.138: Peer 1003 received the 'have' message from 1002 for the piece 125.
+2020-12-04 14:17:37.146: Peer 1003 received the 'have' message from 1002 for the piece 126.
+2020-12-04 14:17:37.147: Peer 1003 received the 'have' message from 1002 for the piece 115.
+2020-12-04 14:17:37.147: Peer 1003 received the 'have' message from 1002 for the piece 127.
+2020-12-04 14:17:37.157: Peer 1003 received the 'have' message from 1002 for the piece 128.
+2020-12-04 14:17:37.158: Peer 1003 received the 'have' message from 1002 for the piece 115.
+2020-12-04 14:17:37.159: Peer 1003 received the 'have' message from 1002 for the piece 129.
+2020-12-04 14:17:37.161: Peer 1003 received the 'have' message from 1002 for the piece 116.
+2020-12-04 14:17:37.162: Peer 1003 received the 'have' message from 1002 for the piece 130.
+2020-12-04 14:17:37.169: Peer 1003 has downloaded the piece 125 from 1001.Now the number of pieces it has is 126
+2020-12-04 14:17:37.17: Peer 1003 received the 'have' message from 1002 for the piece 117.
+2020-12-04 14:17:37.171: Peer 1003 received the 'have' message from 1002 for the piece 131.
+2020-12-04 14:17:37.172: Peer 1003 has downloaded the piece 126 from 1001.Now the number of pieces it has is 127
+2020-12-04 14:17:37.172: Peer 1003 received the 'have' message from 1002 for the piece 118.
+2020-12-04 14:17:37.173: Peer 1003 received the 'have' message from 1002 for the piece 132.
+2020-12-04 14:17:37.174: Peer 1003 received the 'have' message from 1002 for the piece 121.
+2020-12-04 14:17:37.174: Peer 1003 has downloaded the piece 127 from 1001.Now the number of pieces it has is 128
+2020-12-04 14:17:37.175: Peer 1003 received the 'have' message from 1002 for the piece 121.
+2020-12-04 14:17:37.176: Peer 1003 received the 'have' message from 1002 for the piece 133.
+2020-12-04 14:17:37.182: Peer 1003 has downloaded the piece 128 from 1001.Now the number of pieces it has is 129
+2020-12-04 14:17:37.184: Peer 1003 received the 'have' message from 1002 for the piece 134.
+2020-12-04 14:17:37.185: Peer 1003 has downloaded the piece 129 from 1001.Now the number of pieces it has is 130
+2020-12-04 14:17:37.187: Peer 1003 received the 'have' message from 1002 for the piece 135.
+2020-12-04 14:17:37.189: Peer 1003 has downloaded the piece 130 from 1001.Now the number of pieces it has is 131
+2020-12-04 14:17:37.193: Peer 1003 received the 'have' message from 1002 for the piece 136.
+2020-12-04 14:17:37.195: Peer 1003 has downloaded the piece 131 from 1001.Now the number of pieces it has is 132
+2020-12-04 14:17:37.196: Peer 1003 received the 'have' message from 1002 for the piece 137.
+2020-12-04 14:17:37.198: Peer 1003 received the 'have' message from 1002 for the piece 138.
+2020-12-04 14:17:37.198: Peer 1003 has downloaded the piece 132 from 1001.Now the number of pieces it has is 133
+2020-12-04 14:17:37.211: Peer 1003 received the 'have' message from 1002 for the piece 139.
+2020-12-04 14:17:37.211: Peer 1003 has downloaded the piece 133 from 1001.Now the number of pieces it has is 134
+2020-12-04 14:17:37.216: Peer 1003 received the 'have' message from 1002 for the piece 140.
+2020-12-04 14:17:37.216: Peer 1003 has downloaded the piece 134 from 1001.Now the number of pieces it has is 135
+2020-12-04 14:17:37.224: Peer 1003 received the 'have' message from 1002 for the piece 141.
+2020-12-04 14:17:37.225: Peer 1003 has downloaded the piece 135 from 1001.Now the number of pieces it has is 136
+2020-12-04 14:17:37.227: Peer 1003 received the 'have' message from 1002 for the piece 142.
+2020-12-04 14:17:37.229: Peer 1003 received the 'have' message from 1002 for the piece 143.
+2020-12-04 14:17:37.229: Peer 1003 has downloaded the piece 136 from 1001.Now the number of pieces it has is 137
+2020-12-04 14:17:37.236: Peer 1003 received the 'have' message from 1002 for the piece 144.
+2020-12-04 14:17:37.236: Peer 1003 has downloaded the piece 137 from 1001.Now the number of pieces it has is 138
+2020-12-04 14:17:37.239: Peer 1003 received the 'have' message from 1002 for the piece 145.
+2020-12-04 14:17:37.24: Peer 1003 has downloaded the piece 138 from 1001.Now the number of pieces it has is 139
+2020-12-04 14:17:37.243: Peer 1003 received the 'have' message from 1002 for the piece 146.
+2020-12-04 14:17:37.243: Peer 1003 has downloaded the piece 139 from 1001.Now the number of pieces it has is 140
+2020-12-04 14:17:37.244: Peer 1003 has downloaded the piece 140 from 1001.Now the number of pieces it has is 141
+2020-12-04 14:17:37.251: Peer 1003 received the 'have' message from 1002 for the piece 147.
+2020-12-04 14:17:37.255: Peer 1003 received the 'have' message from 1002 for the piece 148.
+2020-12-04 14:17:37.255: Peer 1003 has downloaded the piece 141 from 1001.Now the number of pieces it has is 142
+2020-12-04 14:17:37.258: Peer 1003 received the 'have' message from 1002 for the piece 149.
+2020-12-04 14:17:37.264: Peer 1003 has downloaded the piece 142 from 1001.Now the number of pieces it has is 143
+2020-12-04 14:17:37.268: Peer 1003 has downloaded the piece 143 from 1001.Now the number of pieces it has is 144
+2020-12-04 14:17:37.268: Peer 1003 received the 'have' message from 1002 for the piece 150.
+2020-12-04 14:17:37.276: Peer 1003 has downloaded the piece 144 from 1001.Now the number of pieces it has is 145
+2020-12-04 14:17:37.276: Peer 1003 received the 'have' message from 1002 for the piece 151.
+2020-12-04 14:17:37.28: Peer 1003 has downloaded the piece 145 from 1001.Now the number of pieces it has is 146
+2020-12-04 14:17:37.281: Peer 1003 received the 'have' message from 1002 for the piece 152.
+2020-12-04 14:17:37.284: Peer 1003 has downloaded the piece 146 from 1001.Now the number of pieces it has is 147
+2020-12-04 14:17:37.293: Peer 1003 received the 'have' message from 1002 for the piece 153.
+2020-12-04 14:17:37.296: Peer 1003 has downloaded the piece 147 from 1001.Now the number of pieces it has is 148
+2020-12-04 14:17:37.297: Peer 1003 received the 'have' message from 1002 for the piece 154.
+2020-12-04 14:17:37.308: Peer 1003 has downloaded the piece 148 from 1001.Now the number of pieces it has is 149
+2020-12-04 14:17:37.313: Peer 1003 has downloaded the piece 149 from 1001.Now the number of pieces it has is 150
+2020-12-04 14:17:37.313: Peer 1003 received the 'have' message from 1002 for the piece 155.
+2020-12-04 14:17:37.324: Peer 1003 has downloaded the piece 150 from 1001.Now the number of pieces it has is 151
+2020-12-04 14:17:37.326: Peer 1003 received the 'have' message from 1002 for the piece 156.
+2020-12-04 14:17:37.328: Peer 1003 has downloaded the piece 151 from 1001.Now the number of pieces it has is 152
+2020-12-04 14:17:37.331: Peer 1003 received the 'have' message from 1002 for the piece 157.
+2020-12-04 14:17:37.331: Peer 1003 has downloaded the piece 152 from 1001.Now the number of pieces it has is 153
+2020-12-04 14:17:37.341: Peer 1003 has downloaded the piece 153 from 1001.Now the number of pieces it has is 154
+2020-12-04 14:17:37.342: Peer 1003 received the 'have' message from 1002 for the piece 158.
+2020-12-04 14:17:37.345: Peer 1003 received the 'have' message from 1002 for the piece 159.
+2020-12-04 14:17:37.345: Peer 1003 has downloaded the piece 154 from 1001.Now the number of pieces it has is 155
+2020-12-04 14:17:37.356: Peer 1003 has downloaded the piece 155 from 1001.Now the number of pieces it has is 156
+2020-12-04 14:17:37.357: Peer 1003 received the 'have' message from 1002 for the piece 160.
+2020-12-04 14:17:37.362: Peer 1003 received the 'have' message from 1002 for the piece 161.
+2020-12-04 14:17:37.364: Peer 1003 has downloaded the piece 156 from 1001.Now the number of pieces it has is 157
+2020-12-04 14:17:37.373: Peer 1003 received the 'have' message from 1002 for the piece 162.
+2020-12-04 14:17:37.377: Peer 1003 has downloaded the piece 157 from 1001.Now the number of pieces it has is 158
+2020-12-04 14:17:37.378: Peer 1003 received the 'have' message from 1002 for the piece 163.
+2020-12-04 14:17:37.389: Peer 1003 has downloaded the piece 158 from 1001.Now the number of pieces it has is 159
+2020-12-04 14:17:37.391: Peer 1003 received the 'have' message from 1002 for the piece 164.
+2020-12-04 14:17:37.404: Peer 1003 has downloaded the piece 159 from 1001.Now the number of pieces it has is 160
+2020-12-04 14:17:37.406: Peer 1003 received the 'have' message from 1002 for the piece 165.
+2020-12-04 14:17:37.407: Peer 1003 received the 'have' message from 1002 for the piece 166.
+2020-12-04 14:17:37.408: Peer 1003 has downloaded the piece 160 from 1001.Now the number of pieces it has is 161
+2020-12-04 14:17:37.411: Peer 1003 has downloaded the piece 161 from 1001.Now the number of pieces it has is 162
+2020-12-04 14:17:37.411: Peer 1003 received the 'have' message from 1002 for the piece 167.
+2020-12-04 14:17:37.419: Peer 1003 has downloaded the piece 162 from 1001.Now the number of pieces it has is 163
+2020-12-04 14:17:37.42: Peer 1003 received the 'have' message from 1002 for the piece 168.
+2020-12-04 14:17:37.423: Peer 1003 received the 'have' message from 1002 for the piece 169.
+2020-12-04 14:17:37.433: Peer 1003 has downloaded the piece 163 from 1001.Now the number of pieces it has is 164
+2020-12-04 14:17:37.434: Peer 1003 received the 'have' message from 1002 for the piece 170.
+2020-12-04 14:17:37.439: Peer 1003 has downloaded the piece 164 from 1001.Now the number of pieces it has is 165
+2020-12-04 14:17:37.448: Peer 1003 received the 'have' message from 1002 for the piece 171.
+2020-12-04 14:17:37.451: Peer 1003 has downloaded the piece 165 from 1001.Now the number of pieces it has is 166
+2020-12-04 14:17:37.452: Peer 1003 received the 'have' message from 1002 for the piece 172.
+2020-12-04 14:17:37.462: Peer 1003 has downloaded the piece 166 from 1001.Now the number of pieces it has is 167
+2020-12-04 14:17:37.462: Peer 1003 received the 'have' message from 1002 for the piece 173.
+2020-12-04 14:17:37.464: Peer 1003 has downloaded the piece 167 from 1001.Now the number of pieces it has is 168
+2020-12-04 14:17:37.466: Peer 1003 received the 'have' message from 1002 for the piece 174.
+2020-12-04 14:17:37.466: Peer 1003 has downloaded the piece 168 from 1001.Now the number of pieces it has is 169
+2020-12-04 14:17:37.472: Peer 1003 has downloaded the piece 169 from 1001.Now the number of pieces it has is 170
+2020-12-04 14:17:37.473: Peer 1003 received the 'have' message from 1002 for the piece 175.
+2020-12-04 14:17:37.474: Peer 1003 has downloaded the piece 170 from 1001.Now the number of pieces it has is 171
+2020-12-04 14:17:37.476: Peer 1003 received the 'have' message from 1002 for the piece 176.
+2020-12-04 14:17:37.477: Peer 1003 received the 'have' message from 1002 for the piece 177.
+2020-12-04 14:17:37.478: Peer 1003 has downloaded the piece 171 from 1001.Now the number of pieces it has is 172
+2020-12-04 14:17:37.487: Peer 1003 received the 'have' message from 1002 for the piece 178.
+2020-12-04 14:17:37.488: Peer 1003 has downloaded the piece 172 from 1001.Now the number of pieces it has is 173
+2020-12-04 14:17:37.49: Peer 1003 received the 'have' message from 1002 for the piece 179.
+2020-12-04 14:17:37.491: Peer 1003 has downloaded the piece 173 from 1001.Now the number of pieces it has is 174
+2020-12-04 14:17:37.494: Peer 1003 received the 'have' message from 1002 for the piece 180.
+2020-12-04 14:17:37.499: Peer 1003 has downloaded the piece 174 from 1001.Now the number of pieces it has is 175
+2020-12-04 14:17:37.501: Peer 1003 received the 'have' message from 1002 for the piece 181.
+2020-12-04 14:17:37.502: Peer 1003 has downloaded the piece 175 from 1001.Now the number of pieces it has is 176
+2020-12-04 14:17:37.505: Peer 1003 received the 'have' message from 1002 for the piece 182.
+2020-12-04 14:17:37.507: Peer 1003 has downloaded the piece 176 from 1001.Now the number of pieces it has is 177
+2020-12-04 14:17:37.507: Peer 1003 received the 'have' message from 1002 for the piece 183.
+2020-12-04 14:17:37.515: Peer 1003 has downloaded the piece 177 from 1001.Now the number of pieces it has is 178
+2020-12-04 14:17:37.516: Peer 1003 received the 'have' message from 1002 for the piece 184.
+2020-12-04 14:17:37.527: Peer 1003 has downloaded the piece 178 from 1001.Now the number of pieces it has is 179
+2020-12-04 14:17:37.528: Peer 1003 received the 'have' message from 1002 for the piece 185.
+2020-12-04 14:17:37.532: Peer 1003 has downloaded the piece 179 from 1001.Now the number of pieces it has is 180
+2020-12-04 14:17:37.533: Peer 1003 received the 'have' message from 1002 for the piece 186.
+2020-12-04 14:17:37.542: Peer 1003 has downloaded the piece 180 from 1001.Now the number of pieces it has is 181
+2020-12-04 14:17:37.542: Peer 1003 received the 'have' message from 1002 for the piece 187.
+2020-12-04 14:17:37.547: Peer 1003 has downloaded the piece 181 from 1001.Now the number of pieces it has is 182
+2020-12-04 14:17:37.547: Peer 1003 received the 'have' message from 1002 for the piece 188.
+2020-12-04 14:17:37.555: Peer 1003 received the 'have' message from 1002 for the piece 189.
+2020-12-04 14:17:37.555: Peer 1003 has downloaded the piece 182 from 1001.Now the number of pieces it has is 183
+2020-12-04 14:17:37.557: Peer 1003 received the 'have' message from 1002 for the piece 190.
+2020-12-04 14:17:37.559: Peer 1003 has downloaded the piece 183 from 1001.Now the number of pieces it has is 184
+2020-12-04 14:17:37.567: Peer 1003 has downloaded the piece 184 from 1001.Now the number of pieces it has is 185
+2020-12-04 14:17:37.569: Peer 1003 received the 'have' message from 1002 for the piece 191.
+2020-12-04 14:17:37.572: Peer 1003 has downloaded the piece 185 from 1001.Now the number of pieces it has is 186
+2020-12-04 14:17:37.572: Peer 1003 received the 'have' message from 1002 for the piece 192.
+2020-12-04 14:17:37.582: Peer 1003 received the 'have' message from 1002 for the piece 193.
+2020-12-04 14:17:37.583: Peer 1003 has downloaded the piece 186 from 1001.Now the number of pieces it has is 187
+2020-12-04 14:17:37.586: Peer 1003 received the 'have' message from 1002 for the piece 194.
+2020-12-04 14:17:37.59: Peer 1003 has downloaded the piece 187 from 1001.Now the number of pieces it has is 188
+2020-12-04 14:17:37.596: Peer 1003 received the 'have' message from 1002 for the piece 195.
+2020-12-04 14:17:37.602: Peer 1003 has downloaded the piece 188 from 1001.Now the number of pieces it has is 189
+2020-12-04 14:17:37.602: Peer 1003 received the 'have' message from 1002 for the piece 196.
+2020-12-04 14:17:37.615: Peer 1003 has downloaded the piece 189 from 1001.Now the number of pieces it has is 190
+2020-12-04 14:17:37.617: Peer 1003 received the 'have' message from 1002 for the piece 197.
+2020-12-04 14:17:37.626: Peer 1003 has downloaded the piece 190 from 1001.Now the number of pieces it has is 191
+2020-12-04 14:17:37.628: Peer 1003 received the 'have' message from 1002 for the piece 198.
+2020-12-04 14:17:37.63: Peer 1003 has downloaded the piece 191 from 1001.Now the number of pieces it has is 192
+2020-12-04 14:17:37.631: Peer 1003 received the 'have' message from 1002 for the piece 199.
+2020-12-04 14:17:37.642: Peer 1003 has downloaded the piece 192 from 1001.Now the number of pieces it has is 193
+2020-12-04 14:17:37.643: Peer 1003 received the 'have' message from 1002 for the piece 200.
+2020-12-04 14:17:37.654: Peer 1003 has downloaded the piece 193 from 1001.Now the number of pieces it has is 194
+2020-12-04 14:17:37.654: Peer 1003 received the 'have' message from 1002 for the piece 201.
+2020-12-04 14:17:37.658: Peer 1003 has downloaded the piece 194 from 1001.Now the number of pieces it has is 195
+2020-12-04 14:17:37.661: Peer 1003 received the 'have' message from 1002 for the piece 202.
+2020-12-04 14:17:37.673: Peer 1003 received the 'have' message from 1002 for the piece 203.
+2020-12-04 14:17:37.674: Peer 1003 has downloaded the piece 195 from 1001.Now the number of pieces it has is 196
+2020-12-04 14:17:37.676: Peer 1003 received the 'have' message from 1002 for the piece 204.
+2020-12-04 14:17:37.686: Peer 1003 has downloaded the piece 196 from 1001.Now the number of pieces it has is 197
+2020-12-04 14:17:37.69: Peer 1003 received the 'have' message from 1002 for the piece 205.
+2020-12-04 14:17:37.69: Peer 1003 has downloaded the piece 197 from 1001.Now the number of pieces it has is 198
+2020-12-04 14:17:37.703: Peer 1003 received the 'have' message from 1002 for the piece 206.
+2020-12-04 14:17:37.705: Peer 1003 has downloaded the piece 198 from 1001.Now the number of pieces it has is 199
+2020-12-04 14:17:37.715: Peer 1003 received the 'have' message from 1002 for the piece 207.
+2020-12-04 14:17:37.717: Peer 1003 has downloaded the piece 199 from 1001.Now the number of pieces it has is 200
+2020-12-04 14:17:37.721: Peer 1003 received the 'have' message from 1002 for the piece 208.
+2020-12-04 14:17:37.731: Peer 1003 has downloaded the piece 200 from 1001.Now the number of pieces it has is 201
+2020-12-04 14:17:37.733: Peer 1003 received the 'have' message from 1002 for the piece 209.
+2020-12-04 14:17:37.742: Peer 1003 has downloaded the piece 201 from 1001.Now the number of pieces it has is 202
+2020-12-04 14:17:37.744: Peer 1003 received the 'have' message from 1002 for the piece 210.
+2020-12-04 14:17:37.747: Peer 1003 has downloaded the piece 202 from 1001.Now the number of pieces it has is 203
+2020-12-04 14:17:37.756: Peer 1003 received the 'have' message from 1002 for the piece 211.
+2020-12-04 14:17:37.759: Peer 1003 has downloaded the piece 203 from 1001.Now the number of pieces it has is 204
+2020-12-04 14:17:37.764: Peer 1003 received the 'have' message from 1002 for the piece 212.
+2020-12-04 14:17:37.764: Peer 1003 has downloaded the piece 204 from 1001.Now the number of pieces it has is 205
+2020-12-04 14:17:37.774: Peer 1003 received the 'have' message from 1002 for the piece 213.
+2020-12-04 14:17:37.776: Peer 1003 has downloaded the piece 205 from 1001.Now the number of pieces it has is 206
+2020-12-04 14:17:37.779: Peer 1003 received the 'have' message from 1002 for the piece 214.
+2020-12-04 14:17:37.787: Peer 1003 has downloaded the piece 206 from 1001.Now the number of pieces it has is 207
+2020-12-04 14:17:37.792: Peer 1003 received the 'have' message from 1002 for the piece 215.
+2020-12-04 14:17:37.792: Peer 1003 has downloaded the piece 207 from 1001.Now the number of pieces it has is 208
+2020-12-04 14:17:37.803: Peer 1003 received the 'have' message from 1002 for the piece 216.
+2020-12-04 14:17:37.806: Peer 1003 has downloaded the piece 208 from 1001.Now the number of pieces it has is 209
+2020-12-04 14:17:37.808: Peer 1003 received the 'have' message from 1002 for the piece 217.
+2020-12-04 14:17:37.817: Peer 1003 has downloaded the piece 209 from 1001.Now the number of pieces it has is 210
+2020-12-04 14:17:37.82: Peer 1003 received the 'have' message from 1002 for the piece 218.
+2020-12-04 14:17:37.822: Peer 1003 has downloaded the piece 210 from 1001.Now the number of pieces it has is 211
+2020-12-04 14:17:37.832: Peer 1003 received the 'have' message from 1002 for the piece 219.
+2020-12-04 14:17:37.834: Peer 1003 has downloaded the piece 211 from 1001.Now the number of pieces it has is 212
+2020-12-04 14:17:37.844: Peer 1003 received the 'have' message from 1002 for the piece 220.
+2020-12-04 14:17:37.846: Peer 1003 has downloaded the piece 212 from 1001.Now the number of pieces it has is 213
+2020-12-04 14:17:37.848: Peer 1003 received the 'have' message from 1002 for the piece 221.
+2020-12-04 14:17:37.85: Peer 1003 has downloaded the piece 213 from 1001.Now the number of pieces it has is 214
+2020-12-04 14:17:37.852: Peer 1003 received the 'have' message from 1002 for the piece 222.
+2020-12-04 14:17:37.859: Peer 1003 has downloaded the piece 214 from 1001.Now the number of pieces it has is 215
+2020-12-04 14:17:37.861: Peer 1003 received the 'have' message from 1002 for the piece 223.
+2020-12-04 14:17:37.863: Peer 1003 has downloaded the piece 215 from 1001.Now the number of pieces it has is 216
+2020-12-04 14:17:37.867: Peer 1003 received the 'have' message from 1002 for the piece 224.
+2020-12-04 14:17:37.873: Peer 1003 has downloaded the piece 216 from 1001.Now the number of pieces it has is 217
+2020-12-04 14:17:37.875: Peer 1003 received the 'have' message from 1002 for the piece 225.
+2020-12-04 14:17:37.876: Peer 1003 has downloaded the piece 217 from 1001.Now the number of pieces it has is 218
+2020-12-04 14:17:37.88: Peer 1003 received the 'have' message from 1002 for the piece 226.
+2020-12-04 14:17:37.885: Peer 1003 has downloaded the piece 218 from 1001.Now the number of pieces it has is 219
+2020-12-04 14:17:37.889: Peer 1003 received the 'have' message from 1002 for the piece 227.
+2020-12-04 14:17:37.89: Peer 1003 has downloaded the piece 219 from 1001.Now the number of pieces it has is 220
+2020-12-04 14:17:37.893: Peer 1003 received the 'have' message from 1002 for the piece 228.
+2020-12-04 14:17:37.899: Peer 1003 has downloaded the piece 220 from 1001.Now the number of pieces it has is 221
+2020-12-04 14:17:37.904: Peer 1003 received the 'have' message from 1002 for the piece 229.
+2020-12-04 14:17:37.905: Peer 1003 has downloaded the piece 221 from 1001.Now the number of pieces it has is 222
+2020-12-04 14:17:37.914: Peer 1003 received the 'have' message from 1002 for the piece 230.
+2020-12-04 14:17:37.918: Peer 1003 has downloaded the piece 222 from 1001.Now the number of pieces it has is 223
+2020-12-04 14:17:37.92: Peer 1003 received the 'have' message from 1002 for the piece 231.
+2020-12-04 14:17:37.93: Peer 1003 has downloaded the piece 223 from 1001.Now the number of pieces it has is 224
+2020-12-04 14:17:37.932: Peer 1003 received the 'have' message from 1002 for the piece 232.
+2020-12-04 14:17:37.942: Peer 1003 has downloaded the piece 224 from 1001.Now the number of pieces it has is 225
+2020-12-04 14:17:37.944: Peer 1003 received the 'have' message from 1002 for the piece 233.
+2020-12-04 14:17:37.948: Peer 1003 has downloaded the piece 225 from 1001.Now the number of pieces it has is 226
+2020-12-04 14:17:37.949: Peer 1003 received the 'have' message from 1002 for the piece 234.
+2020-12-04 14:17:37.961: Peer 1003 has downloaded the piece 226 from 1001.Now the number of pieces it has is 227
+2020-12-04 14:17:37.961: Peer 1003 received the 'have' message from 1002 for the piece 235.
+2020-12-04 14:17:37.972: Peer 1003 has downloaded the piece 227 from 1001.Now the number of pieces it has is 228
+2020-12-04 14:17:37.974: Peer 1003 received the 'have' message from 1002 for the piece 236.
+2020-12-04 14:17:37.985: Peer 1003 has downloaded the piece 228 from 1001.Now the number of pieces it has is 229
+2020-12-04 14:17:37.986: Peer 1003 received the 'have' message from 1002 for the piece 237.
+2020-12-04 14:17:37.99: Peer 1003 has downloaded the piece 229 from 1001.Now the number of pieces it has is 230
+2020-12-04 14:17:37.991: Peer 1003 received the 'have' message from 1002 for the piece 238.
+2020-12-04 14:17:38.003: Peer 1003 has downloaded the piece 230 from 1001.Now the number of pieces it has is 231
+2020-12-04 14:17:38.004: Peer 1003 received the 'have' message from 1002 for the piece 239.
+2020-12-04 14:17:38.014: Peer 1003 has downloaded the piece 231 from 1001.Now the number of pieces it has is 232
+2020-12-04 14:17:38.015: Peer 1003 received the 'have' message from 1002 for the piece 240.
+2020-12-04 14:17:38.027: Peer 1003 has downloaded the piece 232 from 1001.Now the number of pieces it has is 233
+2020-12-04 14:17:38.028: Peer 1003 received the 'have' message from 1002 for the piece 241.
+2020-12-04 14:17:38.032: Peer 1003 has downloaded the piece 233 from 1001.Now the number of pieces it has is 234
+2020-12-04 14:17:38.033: Peer 1003 received the 'have' message from 1002 for the piece 242.
+2020-12-04 14:17:38.044: Peer 1003 has downloaded the piece 234 from 1001.Now the number of pieces it has is 235
+2020-12-04 14:17:38.046: Peer 1003 received the 'have' message from 1002 for the piece 243.
+2020-12-04 14:17:38.057: Peer 1003 received the 'have' message from 1002 for the piece 244.
+2020-12-04 14:17:38.057: Peer 1003 has downloaded the piece 235 from 1001.Now the number of pieces it has is 236
+2020-12-04 14:17:38.062: Peer 1003 received the 'have' message from 1002 for the piece 245.
+2020-12-04 14:17:38.07: Peer 1003 has downloaded the piece 236 from 1001.Now the number of pieces it has is 237
+2020-12-04 14:17:38.073: Peer 1003 received the 'have' message from 1002 for the piece 246.
+2020-12-04 14:17:38.074: Peer 1003 has downloaded the piece 237 from 1001.Now the number of pieces it has is 238
+2020-12-04 14:17:38.087: Peer 1003 received the 'have' message from 1002 for the piece 247.
+2020-12-04 14:17:38.087: Peer 1003 has downloaded the piece 238 from 1001.Now the number of pieces it has is 239
+2020-12-04 14:17:38.092: Peer 1003 has downloaded the piece 239 from 1001.Now the number of pieces it has is 240
+2020-12-04 14:17:38.093: Peer 1003 received the 'have' message from 1002 for the piece 248.
+2020-12-04 14:17:38.101: Peer 1003 has downloaded the piece 240 from 1001.Now the number of pieces it has is 241
+2020-12-04 14:17:38.103: Peer 1003 received the 'have' message from 1002 for the piece 249.
+2020-12-04 14:17:38.104: Peer 1003 has downloaded the piece 241 from 1001.Now the number of pieces it has is 242
+2020-12-04 14:17:38.113: Peer 1003 received the 'have' message from 1002 for the piece 250.
+2020-12-04 14:17:38.115: Peer 1003 has downloaded the piece 242 from 1001.Now the number of pieces it has is 243
+2020-12-04 14:17:38.116: Peer 1003 received the 'have' message from 1002 for the piece 251.
+2020-12-04 14:17:38.119: Peer 1003 has downloaded the piece 243 from 1001.Now the number of pieces it has is 244
+2020-12-04 14:17:38.12: Peer 1003 received the 'have' message from 1002 for the piece 252.
+2020-12-04 14:17:38.126: Peer 1003 has downloaded the piece 244 from 1001.Now the number of pieces it has is 245
+2020-12-04 14:17:38.128: Peer 1003 received the 'have' message from 1002 for the piece 253.
+2020-12-04 14:17:38.129: Peer 1003 has downloaded the piece 245 from 1001.Now the number of pieces it has is 246
+2020-12-04 14:17:38.131: Peer 1003 received the 'have' message from 1002 for the piece 254.
+2020-12-04 14:17:38.138: Peer 1003 received the 'have' message from 1002 for the piece 255.
+2020-12-04 14:17:38.139: Peer 1003 has downloaded the piece 246 from 1001.Now the number of pieces it has is 247
+2020-12-04 14:17:38.141: Peer 1003 received the 'have' message from 1002 for the piece 256.
+2020-12-04 14:17:38.142: Peer 1003 has downloaded the piece 247 from 1001.Now the number of pieces it has is 248
+2020-12-04 14:17:38.145: Peer 1003 received the 'have' message from 1002 for the piece 257.
+2020-12-04 14:17:38.146: Peer 1003 has downloaded the piece 248 from 1001.Now the number of pieces it has is 249
+2020-12-04 14:17:38.153: Peer 1003 received the 'have' message from 1002 for the piece 258.
+2020-12-04 14:17:38.154: Peer 1003 has downloaded the piece 249 from 1001.Now the number of pieces it has is 250
+2020-12-04 14:17:38.157: Peer 1003 received the 'have' message from 1002 for the piece 259.
+2020-12-04 14:17:38.158: Peer 1003 has downloaded the piece 250 from 1001.Now the number of pieces it has is 251
+2020-12-04 14:17:38.163: Peer 1003 received the 'have' message from 1002 for the piece 260.
+2020-12-04 14:17:38.164: Peer 1003 has downloaded the piece 251 from 1001.Now the number of pieces it has is 252
+2020-12-04 14:17:38.167: Peer 1003 received the 'have' message from 1002 for the piece 261.
+2020-12-04 14:17:38.168: Peer 1003 has downloaded the piece 252 from 1001.Now the number of pieces it has is 253
+2020-12-04 14:17:38.17: Peer 1003 received the 'have' message from 1002 for the piece 262.
+2020-12-04 14:17:38.171: Peer 1003 has downloaded the piece 253 from 1001.Now the number of pieces it has is 254
+2020-12-04 14:17:38.176: Peer 1003 received the 'have' message from 1002 for the piece 263.
+2020-12-04 14:17:38.177: Peer 1003 has downloaded the piece 254 from 1001.Now the number of pieces it has is 255
+2020-12-04 14:17:38.18: Peer 1003 received the 'have' message from 1002 for the piece 264.
+2020-12-04 14:17:38.182: Peer 1003 has downloaded the piece 255 from 1001.Now the number of pieces it has is 256
+2020-12-04 14:17:38.187: Peer 1003 received the 'have' message from 1002 for the piece 265.
+2020-12-04 14:17:38.187: Peer 1003 has downloaded the piece 256 from 1001.Now the number of pieces it has is 257
+2020-12-04 14:17:38.19: Peer 1003 received the 'have' message from 1002 for the piece 266.
+2020-12-04 14:17:38.191: Peer 1003 has downloaded the piece 257 from 1001.Now the number of pieces it has is 258
+2020-12-04 14:17:38.194: Peer 1003 received the 'have' message from 1002 for the piece 267.
+2020-12-04 14:17:38.201: Peer 1003 has downloaded the piece 258 from 1001.Now the number of pieces it has is 259
+2020-12-04 14:17:38.202: Peer 1003 received the 'have' message from 1002 for the piece 268.
+2020-12-04 14:17:38.204: Peer 1003 has downloaded the piece 259 from 1001.Now the number of pieces it has is 260
+2020-12-04 14:17:38.205: Peer 1003 received the 'have' message from 1002 for the piece 269.
+2020-12-04 14:17:38.206: Peer 1003 has downloaded the piece 260 from 1001.Now the number of pieces it has is 261
+2020-12-04 14:17:38.207: Peer 1003 has downloaded the piece 261 from 1001.Now the number of pieces it has is 262
+2020-12-04 14:17:38.207: Peer 1003 received the 'have' message from 1002 for the piece 270.
+2020-12-04 14:17:38.209: Peer 1003 has downloaded the piece 262 from 1001.Now the number of pieces it has is 263
+2020-12-04 14:17:38.214: Peer 1003 received the 'have' message from 1002 for the piece 271.
+2020-12-04 14:17:38.215: Peer 1003 has downloaded the piece 263 from 1001.Now the number of pieces it has is 264
+2020-12-04 14:17:38.216: Peer 1003 received the 'have' message from 1002 for the piece 272.
+2020-12-04 14:17:38.217: Peer 1003 has downloaded the piece 264 from 1001.Now the number of pieces it has is 265
+2020-12-04 14:17:38.219: Peer 1003 received the 'have' message from 1002 for the piece 273.
+2020-12-04 14:17:38.219: Peer 1003 has downloaded the piece 265 from 1001.Now the number of pieces it has is 266
+2020-12-04 14:17:38.221: Peer 1003 received the 'have' message from 1002 for the piece 274.
+2020-12-04 14:17:38.221: Peer 1003 has downloaded the piece 266 from 1001.Now the number of pieces it has is 267
+2020-12-04 14:17:38.227: Peer 1003 has downloaded the piece 267 from 1001.Now the number of pieces it has is 268
+2020-12-04 14:17:38.228: Peer 1003 received the 'have' message from 1002 for the piece 275.
+2020-12-04 14:17:38.23: Peer 1003 has downloaded the piece 268 from 1001.Now the number of pieces it has is 269
+2020-12-04 14:17:38.231: Peer 1003 received the 'have' message from 1002 for the piece 276.
+2020-12-04 14:17:38.232: Peer 1003 has downloaded the piece 269 from 1001.Now the number of pieces it has is 270
+2020-12-04 14:17:38.237: Peer 1003 received the 'have' message from 1002 for the piece 277.
+2020-12-04 14:17:38.238: Peer 1003 has downloaded the piece 270 from 1001.Now the number of pieces it has is 271
+2020-12-04 14:17:38.24: Peer 1003 has downloaded the piece 271 from 1001.Now the number of pieces it has is 272
+2020-12-04 14:17:38.24: Peer 1003 received the 'have' message from 1002 for the piece 278.
+2020-12-04 14:17:38.243: Peer 1003 has downloaded the piece 272 from 1001.Now the number of pieces it has is 273
+2020-12-04 14:17:38.243: Peer 1003 received the 'have' message from 1002 for the piece 279.
+2020-12-04 14:17:38.245: Peer 1003 has downloaded the piece 273 from 1001.Now the number of pieces it has is 274
+2020-12-04 14:17:38.245: Peer 1003 received the 'have' message from 1002 for the piece 280.
+2020-12-04 14:17:38.251: Peer 1003 has downloaded the piece 274 from 1001.Now the number of pieces it has is 275
+2020-12-04 14:17:38.252: Peer 1003 received the 'have' message from 1002 for the piece 281.
+2020-12-04 14:17:38.254: Peer 1003 has downloaded the piece 275 from 1001.Now the number of pieces it has is 276
+2020-12-04 14:17:38.255: Peer 1003 received the 'have' message from 1002 for the piece 282.
+2020-12-04 14:17:38.256: Peer 1003 has downloaded the piece 276 from 1001.Now the number of pieces it has is 277
+2020-12-04 14:17:38.257: Peer 1003 received the 'have' message from 1002 for the piece 283.
+2020-12-04 14:17:38.269: Peer 1003 has downloaded the piece 277 from 1001.Now the number of pieces it has is 278
+2020-12-04 14:17:38.27: Peer 1003 received the 'have' message from 1002 for the piece 284.
+2020-12-04 14:17:38.272: Peer 1003 has downloaded the piece 278 from 1001.Now the number of pieces it has is 279
+2020-12-04 14:17:38.273: Peer 1003 received the 'have' message from 1002 for the piece 285.
+2020-12-04 14:17:38.275: Peer 1003 has downloaded the piece 279 from 1001.Now the number of pieces it has is 280
+2020-12-04 14:17:38.275: Peer 1003 received the 'have' message from 1002 for the piece 286.
+2020-12-04 14:17:38.277: Peer 1003 has downloaded the piece 280 from 1001.Now the number of pieces it has is 281
+2020-12-04 14:17:38.281: Peer 1003 received the 'have' message from 1002 for the piece 287.
+2020-12-04 14:17:38.283: Peer 1003 has downloaded the piece 281 from 1001.Now the number of pieces it has is 282
+2020-12-04 14:17:38.284: Peer 1003 received the 'have' message from 1002 for the piece 288.
+2020-12-04 14:17:38.286: Peer 1003 has downloaded the piece 282 from 1001.Now the number of pieces it has is 283
+2020-12-04 14:17:38.287: Peer 1003 received the 'have' message from 1002 for the piece 289.
+2020-12-04 14:17:38.293: Peer 1003 received the 'have' message from 1002 for the piece 290.
+2020-12-04 14:17:38.293: Peer 1003 has downloaded the piece 283 from 1001.Now the number of pieces it has is 284
+2020-12-04 14:17:38.295: Peer 1003 received the 'have' message from 1002 for the piece 291.
+2020-12-04 14:17:38.296: Peer 1003 has downloaded the piece 284 from 1001.Now the number of pieces it has is 285
+2020-12-04 14:17:38.297: Peer 1003 received the 'have' message from 1002 for the piece 292.
+2020-12-04 14:17:38.299: Peer 1003 has downloaded the piece 285 from 1001.Now the number of pieces it has is 286
+2020-12-04 14:17:38.301: Peer 1003 received the 'have' message from 1002 for the piece 293.
+2020-12-04 14:17:38.307: Peer 1003 has downloaded the piece 286 from 1001.Now the number of pieces it has is 287
+2020-12-04 14:17:38.309: Peer 1003 received the 'have' message from 1002 for the piece 294.
+2020-12-04 14:17:38.309: Peer 1003 has downloaded the piece 287 from 1001.Now the number of pieces it has is 288
+2020-12-04 14:17:38.312: Peer 1003 received the 'have' message from 1002 for the piece 295.
+2020-12-04 14:17:38.313: Peer 1003 has downloaded the piece 288 from 1001.Now the number of pieces it has is 289
+2020-12-04 14:17:38.32: Peer 1003 received the 'have' message from 1002 for the piece 296.
+2020-12-04 14:17:38.321: Peer 1003 has downloaded the piece 289 from 1001.Now the number of pieces it has is 290
+2020-12-04 14:17:38.323: Peer 1003 received the 'have' message from 1002 for the piece 297.
+2020-12-04 14:17:38.324: Peer 1003 has downloaded the piece 290 from 1001.Now the number of pieces it has is 291
+2020-12-04 14:17:38.325: Peer 1003 received the 'have' message from 1002 for the piece 298.
+2020-12-04 14:17:38.327: Peer 1003 received the 'have' message from 1002 for the piece 299.
+2020-12-04 14:17:38.335: Peer 1003 has downloaded the piece 291 from 1001.Now the number of pieces it has is 292
+2020-12-04 14:17:38.337: Peer 1003 received the 'have' message from 1002 for the piece 300.
+2020-12-04 14:17:38.339: Peer 1003 has downloaded the piece 292 from 1001.Now the number of pieces it has is 293
+2020-12-04 14:17:38.34: Peer 1003 received the 'have' message from 1002 for the piece 301.
+2020-12-04 14:17:38.341: Peer 1003 has downloaded the piece 293 from 1001.Now the number of pieces it has is 294
+2020-12-04 14:17:38.349: Peer 1003 received the 'have' message from 1002 for the piece 302.
+2020-12-04 14:17:38.35: Peer 1003 has downloaded the piece 294 from 1001.Now the number of pieces it has is 295
+2020-12-04 14:17:38.351: Peer 1003 received the 'have' message from 1002 for the piece 303.
+2020-12-04 14:17:38.353: Peer 1003 has downloaded the piece 295 from 1001.Now the number of pieces it has is 296
+2020-12-04 14:17:38.355: Peer 1003 received the 'have' message from 1002 for the piece 304.
+2020-12-04 14:17:38.355: Peer 1003 has downloaded the piece 296 from 1001.Now the number of pieces it has is 297
+2020-12-04 14:17:38.361: Peer 1003 received the 'have' message from 1002 for the piece 305.
+2020-12-04 14:17:38.362: Peer 1003 has downloaded the piece 297 from 1001.Now the number of pieces it has is 298
+2020-12-04 14:17:38.363: Peer 1003 received the 'have' message from 1002 for the piece 306.
+2020-12-04 14:17:38.365: Peer 1003 has downloaded the piece 298 from 1001.Now the number of pieces it has is 299
+2020-12-04 14:17:38.371: Peer 1003 received the 'have' message from 1002 for the piece 307.
+2020-12-04 14:17:38.372: Peer 1003 has downloaded the piece 299 from 1001.Now the number of pieces it has is 300
+2020-12-04 14:17:38.374: Peer 1003 received the 'have' message from 1002 for the piece 308.
+2020-12-04 14:17:38.374: Peer 1003 has downloaded the piece 300 from 1001.Now the number of pieces it has is 301
+2020-12-04 14:17:38.375: Peer 1003 received the 'have' message from 1002 for the piece 309.
+2020-12-04 14:17:38.384: Peer 1003 has downloaded the piece 301 from 1001.Now the number of pieces it has is 302
+2020-12-04 14:17:38.385: Peer 1003 received the 'have' message from 1002 for the piece 310.
+2020-12-04 14:17:38.387: Peer 1003 has downloaded the piece 302 from 1001.Now the number of pieces it has is 303
+2020-12-04 14:17:38.388: Peer 1003 received the 'have' message from 1002 for the piece 311.
+2020-12-04 14:17:38.389: Peer 1003 has downloaded the piece 303 from 1001.Now the number of pieces it has is 304
+2020-12-04 14:17:38.391: Peer 1003 received the 'have' message from 1002 for the piece 312.
+2020-12-04 14:17:38.391: Peer 1003 has downloaded the piece 304 from 1001.Now the number of pieces it has is 305
+2020-12-04 14:17:38.397: Peer 1003 has downloaded the piece 305 from 1001.Now the number of pieces it has is 306
+2020-12-04 14:17:38.397: Peer 1003 received the 'have' message from 1002 for the piece 313.
+2020-12-04 14:17:38.401: Peer 1003 received the 'have' message from 1002 for the piece 314.
+2020-12-04 14:17:38.401: Peer 1003 has downloaded the piece 306 from 1001.Now the number of pieces it has is 307
+2020-12-04 14:17:38.402: Peer 1003 received the 'have' message from 1002 for the piece 315.
+2020-12-04 14:17:38.403: Peer 1003 has downloaded the piece 307 from 1001.Now the number of pieces it has is 308
+2020-12-04 14:17:38.405: Peer 1003 has downloaded the piece 308 from 1001.Now the number of pieces it has is 309
+2020-12-04 14:17:38.405: Peer 1003 received the 'have' message from 1002 for the piece 316.
+2020-12-04 14:17:38.41: Peer 1003 has downloaded the piece 309 from 1001.Now the number of pieces it has is 310
+2020-12-04 14:17:38.411: Peer 1003 received the 'have' message from 1002 for the piece 317.
+2020-12-04 14:17:38.413: Peer 1003 has downloaded the piece 310 from 1001.Now the number of pieces it has is 311
+2020-12-04 14:17:38.414: Peer 1003 received the 'have' message from 1002 for the piece 318.
+2020-12-04 14:17:38.415: Peer 1003 has downloaded the piece 311 from 1001.Now the number of pieces it has is 312
+2020-12-04 14:17:38.416: Peer 1003 received the 'have' message from 1002 for the piece 319.
+2020-12-04 14:17:38.417: Peer 1003 has downloaded the piece 312 from 1001.Now the number of pieces it has is 313
+2020-12-04 14:17:38.418: Peer 1003 received the 'have' message from 1002 for the piece 320.
+2020-12-04 14:17:38.425: Peer 1003 has downloaded the piece 313 from 1001.Now the number of pieces it has is 314
+2020-12-04 14:17:38.428: Peer 1003 received the 'have' message from 1002 for the piece 321.
+2020-12-04 14:17:38.429: Peer 1003 has downloaded the piece 314 from 1001.Now the number of pieces it has is 315
+2020-12-04 14:17:38.436: Peer 1003 received the 'have' message from 1002 for the piece 322.
+2020-12-04 14:17:38.438: Peer 1003 has downloaded the piece 315 from 1001.Now the number of pieces it has is 316
+2020-12-04 14:17:38.439: Peer 1003 received the 'have' message from 1002 for the piece 323.
+2020-12-04 14:17:38.443: Peer 1003 has downloaded the piece 316 from 1001.Now the number of pieces it has is 317
+2020-12-04 14:17:38.443: Peer 1003 received the 'have' message from 1002 for the piece 324.
+2020-12-04 14:17:38.451: Peer 1003 has downloaded the piece 317 from 1001.Now the number of pieces it has is 318
+2020-12-04 14:17:38.453: Peer 1003 received the 'have' message from 1002 for the piece 325.
+2020-12-04 14:17:38.456: Peer 1003 has downloaded the piece 318 from 1001.Now the number of pieces it has is 319
+2020-12-04 14:17:38.458: Peer 1003 received the 'have' message from 1002 for the piece 326.
+2020-12-04 14:17:38.458: Peer 1003 has downloaded the piece 319 from 1001.Now the number of pieces it has is 320
+2020-12-04 14:17:38.467: Peer 1003 received the 'have' message from 1002 for the piece 327.
+2020-12-04 14:17:38.467: Peer 1003 has downloaded the piece 320 from 1001.Now the number of pieces it has is 321
+2020-12-04 14:17:38.47: Peer 1003 received the 'have' message from 1002 for the piece 328.
+2020-12-04 14:17:38.47: Peer 1003 has downloaded the piece 321 from 1001.Now the number of pieces it has is 322
+2020-12-04 14:17:38.476: Peer 1003 has downloaded the piece 322 from 1001.Now the number of pieces it has is 323
+2020-12-04 14:17:38.477: Peer 1003 received the 'have' message from 1002 for the piece 329.
+2020-12-04 14:17:38.48: Peer 1003 has downloaded the piece 323 from 1001.Now the number of pieces it has is 324
+2020-12-04 14:17:38.481: Peer 1003 received the 'have' message from 1002 for the piece 330.
+2020-12-04 14:17:38.487: Peer 1003 has downloaded the piece 324 from 1001.Now the number of pieces it has is 325
+2020-12-04 14:17:38.489: Peer 1003 received the 'have' message from 1002 for the piece 331.
+2020-12-04 14:17:38.493: Peer 1003 received the 'have' message from 1002 for the piece 332.
+2020-12-04 14:17:38.493: Peer 1003 has downloaded the piece 325 from 1001.Now the number of pieces it has is 326
+2020-12-04 14:17:38.504: Peer 1003 has downloaded the piece 326 from 1001.Now the number of pieces it has is 327
+2020-12-04 14:17:38.506: Peer 1003 received the 'have' message from 1002 for the piece 333.
+2020-12-04 14:17:38.51: Peer 1003 has downloaded the piece 327 from 1001.Now the number of pieces it has is 328
+2020-12-04 14:17:38.51: Peer 1003 received the 'have' message from 1002 for the piece 334.
+2020-12-04 14:17:38.522: Peer 1003 has downloaded the piece 328 from 1001.Now the number of pieces it has is 329
+2020-12-04 14:17:38.522: Peer 1003 received the 'have' message from 1002 for the piece 335.
+2020-12-04 14:17:38.526: Peer 1003 received the 'have' message from 1002 for the piece 336.
+2020-12-04 14:17:38.537: Peer 1003 has downloaded the piece 329 from 1001.Now the number of pieces it has is 330
+2020-12-04 14:17:38.539: Peer 1003 received the 'have' message from 1002 for the piece 337.
+2020-12-04 14:17:38.551: Peer 1003 has downloaded the piece 330 from 1001.Now the number of pieces it has is 331
+2020-12-04 14:17:38.553: Peer 1003 received the 'have' message from 1002 for the piece 338.
+2020-12-04 14:17:38.557: Peer 1003 has downloaded the piece 331 from 1001.Now the number of pieces it has is 332
+2020-12-04 14:17:38.558: Peer 1003 received the 'have' message from 1002 for the piece 339.
+2020-12-04 14:17:38.569: Peer 1003 has downloaded the piece 332 from 1001.Now the number of pieces it has is 333
+2020-12-04 14:17:38.57: Peer 1003 received the 'have' message from 1002 for the piece 340.
+2020-12-04 14:17:38.574: Peer 1003 has downloaded the piece 333 from 1001.Now the number of pieces it has is 334
+2020-12-04 14:17:38.575: Peer 1003 received the 'have' message from 1002 for the piece 341.
+2020-12-04 14:17:38.584: Peer 1003 has downloaded the piece 334 from 1001.Now the number of pieces it has is 335
+2020-12-04 14:17:38.585: Peer 1003 received the 'have' message from 1002 for the piece 342.
+2020-12-04 14:17:38.587: Peer 1003 has downloaded the piece 335 from 1001.Now the number of pieces it has is 336
+2020-12-04 14:17:38.589: Peer 1003 received the 'have' message from 1002 for the piece 343.
+2020-12-04 14:17:38.595: Peer 1003 has downloaded the piece 336 from 1001.Now the number of pieces it has is 337
+2020-12-04 14:17:38.597: Peer 1003 received the 'have' message from 1002 for the piece 344.
+2020-12-04 14:17:38.6: Peer 1003 has downloaded the piece 337 from 1001.Now the number of pieces it has is 338
+2020-12-04 14:17:38.601: Peer 1003 received the 'have' message from 1002 for the piece 345.
+2020-12-04 14:17:38.607: Peer 1003 has downloaded the piece 338 from 1001.Now the number of pieces it has is 339
+2020-12-04 14:17:38.609: Peer 1003 received the 'have' message from 1002 for the piece 346.
+2020-12-04 14:17:38.611: Peer 1003 has downloaded the piece 339 from 1001.Now the number of pieces it has is 340
+2020-12-04 14:17:38.622: Peer 1003 received the 'have' message from 1002 for the piece 347.
+2020-12-04 14:17:38.622: Peer 1003 has downloaded the piece 340 from 1001.Now the number of pieces it has is 341
+2020-12-04 14:17:38.625: Peer 1003 received the 'have' message from 1002 for the piece 348.
+2020-12-04 14:17:38.626: Peer 1003 has downloaded the piece 341 from 1001.Now the number of pieces it has is 342
+2020-12-04 14:17:38.635: Peer 1003 received the 'have' message from 1002 for the piece 349.
+2020-12-04 14:17:38.635: Peer 1003 has downloaded the piece 342 from 1001.Now the number of pieces it has is 343
+2020-12-04 14:17:38.639: Peer 1003 has downloaded the piece 343 from 1001.Now the number of pieces it has is 344
+2020-12-04 14:17:38.64: Peer 1003 received the 'have' message from 1002 for the piece 350.
+2020-12-04 14:17:38.647: Peer 1003 has downloaded the piece 344 from 1001.Now the number of pieces it has is 345
+2020-12-04 14:17:38.648: Peer 1003 received the 'have' message from 1002 for the piece 351.
+2020-12-04 14:17:38.649: Peer 1003 has downloaded the piece 345 from 1001.Now the number of pieces it has is 346
+2020-12-04 14:17:38.652: Peer 1003 received the 'have' message from 1002 for the piece 352.
+2020-12-04 14:17:38.654: Peer 1003 has downloaded the piece 346 from 1001.Now the number of pieces it has is 347
+2020-12-04 14:17:38.661: Peer 1003 received the 'have' message from 1002 for the piece 353.
+2020-12-04 14:17:38.663: Peer 1003 has downloaded the piece 347 from 1001.Now the number of pieces it has is 348
+2020-12-04 14:17:38.665: Peer 1003 received the 'have' message from 1002 for the piece 354.
+2020-12-04 14:17:38.667: Peer 1003 has downloaded the piece 348 from 1001.Now the number of pieces it has is 349
+2020-12-04 14:17:38.673: Peer 1003 received the 'have' message from 1002 for the piece 355.
+2020-12-04 14:17:38.673: Peer 1003 has downloaded the piece 349 from 1001.Now the number of pieces it has is 350
+2020-12-04 14:17:38.677: Peer 1003 has downloaded the piece 350 from 1001.Now the number of pieces it has is 351
+2020-12-04 14:17:38.678: Peer 1003 received the 'have' message from 1002 for the piece 356.
+2020-12-04 14:17:38.681: Peer 1003 has downloaded the piece 351 from 1001.Now the number of pieces it has is 352
+2020-12-04 14:17:38.687: Peer 1003 received the 'have' message from 1002 for the piece 357.
+2020-12-04 14:17:38.69: Peer 1003 has downloaded the piece 352 from 1001.Now the number of pieces it has is 353
+2020-12-04 14:17:38.691: Peer 1003 received the 'have' message from 1002 for the piece 358.
+2020-12-04 14:17:38.693: Peer 1003 has downloaded the piece 353 from 1001.Now the number of pieces it has is 354
+2020-12-04 14:17:38.694: Peer 1003 received the 'have' message from 1002 for the piece 359.
+2020-12-04 14:17:38.702: Peer 1003 has downloaded the piece 354 from 1001.Now the number of pieces it has is 355
+2020-12-04 14:17:38.703: Peer 1003 received the 'have' message from 1002 for the piece 360.
+2020-12-04 14:17:38.705: Peer 1003 has downloaded the piece 355 from 1001.Now the number of pieces it has is 356
+2020-12-04 14:17:38.706: Peer 1003 received the 'have' message from 1002 for the piece 361.
+2020-12-04 14:17:38.709: Peer 1003 received the 'have' message from 1002 for the piece 362.
+2020-12-04 14:17:38.714: Peer 1003 has downloaded the piece 356 from 1001.Now the number of pieces it has is 357
+2020-12-04 14:17:38.717: Peer 1003 has downloaded the piece 357 from 1001.Now the number of pieces it has is 358
+2020-12-04 14:17:38.718: Peer 1003 received the 'have' message from 1002 for the piece 363.
+2020-12-04 14:17:38.721: Peer 1003 has downloaded the piece 358 from 1001.Now the number of pieces it has is 359
+2020-12-04 14:17:38.722: Peer 1003 received the 'have' message from 1002 for the piece 364.
+2020-12-04 14:17:38.733: Peer 1003 has downloaded the piece 359 from 1001.Now the number of pieces it has is 360
+2020-12-04 14:17:38.734: Peer 1003 received the 'have' message from 1002 for the piece 365.
+2020-12-04 14:17:38.744: Peer 1003 has downloaded the piece 360 from 1001.Now the number of pieces it has is 361
+2020-12-04 14:17:38.747: Peer 1003 received the 'have' message from 1002 for the piece 366.
+2020-12-04 14:17:38.75: Peer 1003 has downloaded the piece 361 from 1001.Now the number of pieces it has is 362
+2020-12-04 14:17:38.758: Peer 1003 received the 'have' message from 1002 for the piece 367.
+2020-12-04 14:17:38.761: Peer 1003 has downloaded the piece 362 from 1001.Now the number of pieces it has is 363
+2020-12-04 14:17:38.762: Peer 1003 received the 'have' message from 1002 for the piece 368.
+2020-12-04 14:17:38.774: Peer 1003 received the 'have' message from 1002 for the piece 369.
+2020-12-04 14:17:38.775: Peer 1003 has downloaded the piece 363 from 1001.Now the number of pieces it has is 364
+2020-12-04 14:17:38.779: Peer 1003 received the 'have' message from 1002 for the piece 370.
+2020-12-04 14:17:38.788: Peer 1003 has downloaded the piece 364 from 1001.Now the number of pieces it has is 365
+2020-12-04 14:17:38.79: Peer 1003 received the 'have' message from 1002 for the piece 371.
+2020-12-04 14:17:38.793: Peer 1003 has downloaded the piece 365 from 1001.Now the number of pieces it has is 366
+2020-12-04 14:17:38.802: Peer 1003 received the 'have' message from 1002 for the piece 372.
+2020-12-04 14:17:38.804: Peer 1003 has downloaded the piece 366 from 1001.Now the number of pieces it has is 367
+2020-12-04 14:17:38.808: Peer 1003 received the 'have' message from 1002 for the piece 373.
+2020-12-04 14:17:38.817: Peer 1003 has downloaded the piece 367 from 1001.Now the number of pieces it has is 368
+2020-12-04 14:17:38.821: Peer 1003 received the 'have' message from 1002 for the piece 374.
+2020-12-04 14:17:38.822: Peer 1003 has downloaded the piece 368 from 1001.Now the number of pieces it has is 369
+2020-12-04 14:17:38.831: Peer 1003 received the 'have' message from 1002 for the piece 375.
+2020-12-04 14:17:38.835: Peer 1003 has downloaded the piece 369 from 1001.Now the number of pieces it has is 370
+2020-12-04 14:17:38.835: Peer 1003 received the 'not interested' messaging from 1002.
+2020-12-04 14:17:38.848: Peer 1003 has downloaded the piece 370 from 1001.Now the number of pieces it has is 371
+2020-12-04 14:17:38.853: Peer 1003 has downloaded the piece 371 from 1001.Now the number of pieces it has is 372
+2020-12-04 14:17:38.863: Peer 1003 has downloaded the piece 372 from 1001.Now the number of pieces it has is 373
+2020-12-04 14:17:38.867: Peer 1003 has downloaded the piece 373 from 1001.Now the number of pieces it has is 374
+2020-12-04 14:17:38.877: Peer 1003 has downloaded the piece 374 from 1001.Now the number of pieces it has is 375
+2020-12-04 14:17:38.88: Peer 1003 has downloaded the piece 375 from 1001.Now the number of pieces it has is 376
+2020-12-04 14:17:38.906Peer 1003 has downloaded the complete file.
