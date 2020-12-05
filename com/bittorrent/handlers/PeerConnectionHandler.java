@@ -107,7 +107,7 @@ public class PeerConnectionHandler implements Runnable{
 
         logger.logUnchokingEvent(remotePeerId);
 
-        int interestingPieceIndex = getNextInterestingPieceIndex(BitTorrentState.getPeers().get(remotePeerId).getBitField(), this.peerState.getBitField());
+        int interestingPieceIndex = getNextInterestingPieceIndex(BitTorrentState.findPeers().get(remotePeerId).getBitField(), this.peerState.getBitField());
 
         if (interestingPieceIndex != -1) {
             RequestMessage requestMessage = new RequestMessage(interestingPieceIndex);
@@ -122,7 +122,7 @@ public class PeerConnectionHandler implements Runnable{
         logger.logReceivedHaveMessage(remotePeerId, index);
 
         // set peer bitset info
-        BitTorrentState.getPeers().get(remotePeerId).getBitField().set(index);
+        BitTorrentState.findPeers().get(remotePeerId).getBitField().set(index);
 
         if (!this.peerState.getBitField().get(index)) {
             System.out.println(this.peerState.getPeerId() + "Sending interested message for piece" + index);
@@ -147,16 +147,16 @@ public class PeerConnectionHandler implements Runnable{
         else {
             System.out.println("Error: piece length is 0!");
         }
-        int index = getNextInterestingPieceIndex(BitTorrentState.getPeers().get(remotePeerId).getBitField(),
+        int index = getNextInterestingPieceIndex(BitTorrentState.findPeers().get(remotePeerId).getBitField(),
                 this.peerState.getBitField());
         if (index == -1) {
-            if (this.peerState.getBitField().nextClearBit(0) == BitTorrentState.getNumberOfPieces()) {
+            if (this.peerState.getBitField().nextClearBit(0) == BitTorrentState.pieceCount()) {
                 NotInterestedMessage notInterestedMessage = new NotInterestedMessage();
                 broadcastMessage(notInterestedMessage);
                 System.out.println(this.peerState.getBitField().nextClearBit(0));
                 FileUtils.joinPiecesAndWriteFile(this.peerState);
                 logger.logDownloadComplete();
-                if (BitTorrentState.hasAllPeersDownloadedFile()) {
+                if (BitTorrentState.isFileDownloadedbyAll()) {
                     stopAllConnections();
                 }
             }
@@ -179,7 +179,7 @@ public class PeerConnectionHandler implements Runnable{
         }
 
         System.out.println("Setting data rate " + dataRate);
-        BitTorrentState.getPeers().get(remotePeerId).assignDataRate(dataRate);
+        BitTorrentState.findPeers().get(remotePeerId).assignDataRate(dataRate);
     }
 
     private void processRequest(Message receivedMsg) {
@@ -212,7 +212,7 @@ public class PeerConnectionHandler implements Runnable{
     private void processNotInterested() {
         logger.logNotInterestedMessageReceived(remotePeerId);
         this.peerState.discardPeersInterested(remotePeerId);
-        if (BitTorrentState.hasAllPeersDownloadedFile()) {
+        if (BitTorrentState.isFileDownloadedbyAll()) {
             stopAllConnections();
         }
     }
@@ -220,7 +220,7 @@ public class PeerConnectionHandler implements Runnable{
     private void processBitField(Message message){
         BitFieldMessage bitFieldMessage = (BitFieldMessage) message;
 
-        BitTorrentState.getPeers().get(remotePeerId).assignBitfieldValue(bitFieldMessage.getPayload());
+        BitTorrentState.findPeers().get(remotePeerId).assignBitfieldValue(bitFieldMessage.getPayload());
 
         int interestingPieceIndex = getNextInterestingPieceIndex(bitFieldMessage.getPayload(), this.peerState.getBitField());
 
@@ -248,7 +248,7 @@ public class PeerConnectionHandler implements Runnable{
     private void processHandshake(Message response) {
         HandshakeMessage handshakeMessage = (HandshakeMessage) response;
         this.remotePeerId = handshakeMessage.getPeerId();
-        if (BitTorrentState.getPeers().containsKey(remotePeerId)) {
+        if (BitTorrentState.findPeers().containsKey(remotePeerId)) {
             System.out.println(remotePeerId + " validated!");
         }
         else {

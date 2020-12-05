@@ -21,12 +21,12 @@ public class FileUtils {
 			fileInputStream = new FileInputStream(file);
 			dataInputStream = new DataInputStream(fileInputStream);
 
-			int numberOfPieces = BitTorrentState.getNumberOfPieces();
+			int numberOfPieces = BitTorrentState.pieceCount();
 			ConcurrentHashMap<Integer, byte[]> fileSplitMap = new ConcurrentHashMap<>();
 
 			for (int i = 0; i < numberOfPieces; i++) {
-				int pieceSize = i != numberOfPieces - 1 ? BitTorrentState.getPieceSize()
-						: (int) (BitTorrentState.getFileSize() % BitTorrentState.getPieceSize());
+				int pieceSize = i != numberOfPieces - 1 ? BitTorrentState.findPieceLength()
+						: (int) (BitTorrentState.findSizeOfTheFile() % BitTorrentState.findPieceLength());
 				byte[] piece = new byte[pieceSize];
 				dataInputStream.readFully(piece);
 				fileSplitMap.put(i, piece);
@@ -89,7 +89,7 @@ public class FileUtils {
 
 	public static void main(String args[]) {
 		// For testing only...
-//		BitTorrentState.setStateFromConfigFiles();
+//		BitTorrentState.loadPeerStateFromConfig();
 //		PeerState peerState = new PeerState();
 //		FileUtils fileHandler = new FileUtils("1001");
 //		fileHandler.makeFilesAndDirectories();

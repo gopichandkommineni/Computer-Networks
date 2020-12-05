@@ -19,8 +19,8 @@ public class PeerProcessExecutor implements Runnable{
 	private Logger logger;
 
 	public PeerProcessExecutor(String peerId) {
-		BitTorrentState.setStateFromConfigFiles();
-		this.peerState = BitTorrentState.getPeerState(peerId);
+		BitTorrentState.loadPeerStateFromConfig();
+		this.peerState = BitTorrentState.findPeerStatus(peerId);
 		this.logger = Logger.getLogger(peerId);
 	}
 
@@ -34,7 +34,7 @@ public class PeerProcessExecutor implements Runnable{
 			this.peerState.assignFilePieceIndexMap(new ConcurrentHashMap<>());
 		}
 		System.out.println("Peer ID :"+ peerState.getPeerId());
-		BitTorrentState.showConfiguration();
+		BitTorrentState.displayConfig();
 		System.out.println(peerState);
 
 		// accept incoming connections
@@ -47,13 +47,13 @@ public class PeerProcessExecutor implements Runnable{
 		// Periodically select preferred neighbors for this peer
 		Timer timer1 = new Timer();
 		PreferredNeighborsScheduler preferredNeighborsScheduler = new PreferredNeighborsScheduler(peerState);
-		timer1.scheduleAtFixedRate(preferredNeighborsScheduler, 200, BitTorrentState.getUnchokingInterval() * 1000);
+		timer1.scheduleAtFixedRate(preferredNeighborsScheduler, 200, BitTorrentState.findUnchokingInterval() * 1000);
 		this.peerState.setTimer1(timer1);
 
 		// Start OptimisticUnchokedPeerScheduler
 		Timer timer2 = new Timer();
 		OptimisticUnchokingScheduler optimisticUnchokingScheduler = new OptimisticUnchokingScheduler(peerState);
-		timer2.scheduleAtFixedRate(optimisticUnchokingScheduler, 500, BitTorrentState.getOptimisticUnchokingInterval() * 1000);
+		timer2.scheduleAtFixedRate(optimisticUnchokingScheduler, 500, BitTorrentState.findOptUnchokingInterval() * 1000);
 		this.peerState.setTimer2(timer2);
 
 		try {
@@ -70,7 +70,7 @@ public class PeerProcessExecutor implements Runnable{
 
 	public void createOutgoingConnections() {
 
-		Map<String, PeerState> peers = BitTorrentState.getPeers();
+		Map<String, PeerState> peers = BitTorrentState.findPeers();
 
 		int currentSeqId = this.peerState.getSequenceNum();
 

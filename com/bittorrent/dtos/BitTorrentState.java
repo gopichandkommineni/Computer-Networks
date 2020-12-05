@@ -20,51 +20,51 @@ public class BitTorrentState {
 
 	private static ConcurrentHashMap<String, PeerState> peers = new ConcurrentHashMap<>();
 
-	public static PeerState getPeerState(String id) {
+	public static PeerState findPeerStatus(String id) {
 		return peers.get(id);
 	}
 
-	public static Map<String, PeerState> getPeers() {
+	public static Map<String, PeerState> findPeers() {
 		return peers;
 	}
 
-	public static int numberOfPeers() {
+	public static int peerCount() {
 		return peers.size();
 	}
 
-	public static int getNumberOfPieces() {
+	public static int pieceCount() {
 		return numberOfPieces;
 	}
 
-	public static void setNumberOfPieces(int numberOfPieces) {
+	public static void initPieceCount(int numberOfPieces) {
 		BitTorrentState.numberOfPieces = numberOfPieces;
 	}
 
-	public static int getNumberOfPreferredNeighbors() {
+	public static int findNumPreferPeers() {
 		return numberOfPreferredNeighbors;
 	}
 
-	public static void setNumberOfPreferredNeighbors(int numberOfPreferredNeighbors) {
+	public static void assignNumPreferPeers(int numberOfPreferredNeighbors) {
 		BitTorrentState.numberOfPreferredNeighbors = numberOfPreferredNeighbors;
 	}
 
-	public static int getUnchokingInterval() {
+	public static int findUnchokingInterval() {
 		return unchokingInterval;
 	}
 
-	public static void setUnchokingInterval(int unchokingInterval) {
+	public static void assignUnchokingInterval(int unchokingInterval) {
 		BitTorrentState.unchokingInterval = unchokingInterval;
 	}
 
-	public static int getOptimisticUnchokingInterval() {
+	public static int findOptUnchokingInterval() {
 		return optimisticUnchokingInterval;
 	}
 
-	public static void setOptimisticUnchokingInterval(int optimisticUnchokingInterval) {
+	public static void assignOptimisticUnchokingInterval(int optimisticUnchokingInterval) {
 		BitTorrentState.optimisticUnchokingInterval = optimisticUnchokingInterval;
 	}
 
-	public static String getFileName() {
+	public static String findFile() {
 		return fileName;
 	}
 
@@ -72,36 +72,36 @@ public class BitTorrentState {
 		BitTorrentState.fileName = fileName;
 	}
 
-	public static long getFileSize() {
+	public static long findSizeOfTheFile() {
 		return fileSize;
 	}
 
-	public static void setFileSize(long fileSize) {
+	public static void assignSizeOfTheFile(long fileSize) {
 		BitTorrentState.fileSize = fileSize;
 	}
 
-	public static int getPieceSize() {
+	public static int findPieceLength() {
 		return pieceSize;
 	}
 
-	public static void setPieceSize(int pieceSize) {
+	public static void assignPieceLength(int pieceSize) {
 		BitTorrentState.pieceSize = pieceSize;
 	}
 
-	public static void calculateAndSetNumberOfPieces() {
+	public static void calAndAssignPieceCount() {
 		numberOfPieces = (int)Math.ceil((double)fileSize / pieceSize);
 		System.out.println("BitTorrent current state - Number of pieces: " + numberOfPieces);
 	}
 
-	public static String getPeerLogFilePath() {
+	public static String findPathOfLogFile() {
 		return PropertiesEnum.PEER_LOG_FILE_PATH.getValue();
 	}
 
-	public static String getPeerLogFileExtension() {
+	public static String findPeerLogExt() {
 		return PropertiesEnum.PEER_LOG_FILE_EXTENSION.getValue();
 	}
 
-	public static void setPeerMapFromProperties() {
+	public static void createPeerMap() {
 		Scanner sc = null;
 		int seq = 1;
 		try {
@@ -129,23 +129,16 @@ public class BitTorrentState {
 		}
 	}
 
-	public static void showConfiguration() {
-		System.out.println( "PeerProperties [numberOfPreferredNeighbors="
-				+ numberOfPreferredNeighbors
-				+ ", unchokingInterval="
-				+ unchokingInterval
-				+ ", optimisticUnchokingInterval="
-				+ optimisticUnchokingInterval
-				+ ", fileName="
-				+ fileName
-				+ ", fileSize="
-				+ fileSize
-				+ ", pieceSize="
-				+ pieceSize
-				+ "]");
+	public static void displayConfig() {
+		System.out.println( "PeerProperties [numberOfPreferredNeighbors=" + numberOfPreferredNeighbors);
+		System.out.println(", unchokingInterval="+ unchokingInterval);
+		System.out.println(", optimisticUnchokingInterval="+ optimisticUnchokingInterval);
+		System.out.println(", fileName="+ fileName);
+		System.out.println(", fileSize="+ fileSize);
+		System.out.println(", pieceSize=" + pieceSize+ "]");
 	}
 
-	public static void setStateFromConfigFiles() {
+	public static void loadPeerStateFromConfig() {
 
 		Properties properties = new Properties();
 		try {
@@ -165,16 +158,16 @@ public class BitTorrentState {
 		pieceSize = Integer.parseInt(properties.getProperty(PropertiesEnum.PIECESIZE.getValue()));
 		unchokingInterval =
 				Integer.parseInt(properties.getProperty(PropertiesEnum.UNCHOKING_INTERVAL.getValue()));
-		calculateAndSetNumberOfPieces();
+		calAndAssignPieceCount();
 
 		System.out.println(PropertiesEnum.PROPERTIES_FILE_PATH.getValue());
 		System.out.println(PropertiesEnum.PROPERTIES_FILE_PATH.getValue() + BitTorrentState.fileName);
 
-		setPeerMapFromProperties();
+		createPeerMap();
 
 	}
 
-	public static synchronized boolean hasAllPeersDownloadedFile() {
+	public static synchronized boolean isFileDownloadedbyAll() {
 		for (PeerState peerState: peers.values()) {
 			if (peerState.getBitField().nextClearBit(0) != numberOfPieces) {
 				System.out.println(peerState.getPeerId() + " has incomplete file, so not exiting");

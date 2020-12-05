@@ -89,7 +89,7 @@ public class PeerState {
 		this.dataRate = dataRate;
 	}
 
-	public BlockingQueue<Message> getBlockingPeerss(){
+	public BlockingQueue<Message> getBlockingPeers(){
 		return queue;
 	}
 
@@ -173,9 +173,9 @@ public class PeerState {
 	public void containsFile(boolean hasSharedFile) {
 		if (hasSharedFile) {
 			if (this.bitField == null) {
-				this.bitField = new BitSet(BitTorrentState.getNumberOfPieces());
+				this.bitField = new BitSet(BitTorrentState.pieceCount());
 			}
-			this.bitField.set(0, BitTorrentState.getNumberOfPieces());
+			this.bitField.set(0, BitTorrentState.pieceCount());
 		}
 
 		this.hasSharedFile = hasSharedFile;
@@ -205,7 +205,7 @@ public class PeerState {
 	}
 
 	public PeerState(){
-		this.bitField = new BitSet(BitTorrentState.getNumberOfPieces());
+		this.bitField = new BitSet(BitTorrentState.pieceCount());
 	}
 
 	@Override

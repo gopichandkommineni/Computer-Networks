@@ -35,7 +35,7 @@ public class PreferredNeighborsScheduler extends TimerTask {
 
         maxHeap.clear();
         for (String interestedNeighbor: currentPeerState.findPeersInterested().values()) {
-            maxHeap.add(BitTorrentState.getPeers().get(interestedNeighbor));
+            maxHeap.add(BitTorrentState.findPeers().get(interestedNeighbor));
         }
         System.out.println("PreferredNeighborsTask: maxHeapSize - "+maxHeap.size());
 
@@ -45,7 +45,7 @@ public class PreferredNeighborsScheduler extends TimerTask {
         oldPreferredNeighbours.putAll(currentPeerState.findPreferPeers());
 
         Map<String, String> newPreferredNeighbours = new HashMap<>();
-        for (int i = 0; i < BitTorrentState.getNumberOfPreferredNeighbors(); i++) {
+        for (int i = 0; i < BitTorrentState.findNumPreferPeers(); i++) {
             if (maxHeap.size() > 0) {
                 String peerId = maxHeap.poll().getPeerId();
                 if (currentPeerState.getPeerId().equals(peerId)) {

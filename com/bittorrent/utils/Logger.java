@@ -52,8 +52,8 @@ public class Logger {
 
 	private File makeLogDirectoryForPeer(String peerId) throws Exception{
 
-		String path = BitTorrentState.getPeerLogFilePath() + peerId
-				+ BitTorrentState.getPeerLogFileExtension();
+		String path = BitTorrentState.findPathOfLogFile() + peerId
+				+ BitTorrentState.findPeerLogExt();
 
 		File file = new File(path);
 		file.getParentFile().mkdirs();
