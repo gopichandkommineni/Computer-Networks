@@ -82,7 +82,7 @@ public class PeerProcessExecutor implements Runnable{
 					logger.logTcpConnectionTo(remotePeer.getPeerId());
 					Socket clientSocket = new Socket(remotePeer.getHostName(), remotePeer.getPort());
 					PeerConnectionHandler peerConnectionHandler = new PeerConnectionHandler(clientSocket, peerState);
-					peerConnectionHandler.setRemotePeerId(remotePeer.getPeerId());
+					peerConnectionHandler.assignRemotePeerId(remotePeer.getPeerId());
 					peerState.conList().put(remotePeer.getPeerId(), peerConnectionHandler);
 					Thread t = new Thread(peerConnectionHandler);
 					t.start();

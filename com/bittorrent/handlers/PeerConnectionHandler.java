@@ -30,7 +30,7 @@ public class PeerConnectionHandler implements Runnable{
         this.logger = Logger.getLogger(peerState.getPeerId());
     }
 
-    public void setRemotePeerId(String remotePeerId) {
+    public void assignRemotePeerId(String remotePeerId) {
         this.remotePeerId = remotePeerId;
     }
 
@@ -52,7 +52,7 @@ public class PeerConnectionHandler implements Runnable{
 
                 switch (receivedMsg.getMessageType()) {
                     case HANDSHAKE: {
-                        processHandshake(receivedMsg);
+                        processHandShakeMessage(receivedMsg);
                         break;
                     }
                     case BITFIELD: {
@@ -60,15 +60,15 @@ public class PeerConnectionHandler implements Runnable{
                         break;
                     }
                     case INTERESTED: {
-                        processInterested();
+                        processInterestedMessage();
                         break;
                     }
                     case NOT_INTERESTED: {
-                        processNotInterested();
+                        processNotInterestedMessage();
                         break;
                     }
                     case REQUEST: {
-                        processRequest(receivedMsg);
+                        processPeerRequest(receivedMsg);
                         break;
                     }
                     case PIECE: {
@@ -76,15 +76,15 @@ public class PeerConnectionHandler implements Runnable{
                         break;
                     }
                     case HAVE: {
-                        processHave(receivedMsg);
+                        processHaveMessage(receivedMsg);
                         break;
                     }
                     case CHOKE: {
-                        processChoke();
+                        processChokeMessage();
                         break;
                     }
                     case UNCHOKE: {
-                        processUnchoke();
+                        processUnChokeMessage();
                         break;
                     }
                     default:
@@ -99,11 +99,11 @@ public class PeerConnectionHandler implements Runnable{
         }
     }
 
-    private void processChoke() {
+    private void processChokeMessage() {
         logger.logChokingEvent(remotePeerId);
     }
 
-    private void processUnchoke() {
+    private void processUnChokeMessage() {
 
         logger.logUnchokingEvent(remotePeerId);
 
@@ -115,7 +115,7 @@ public class PeerConnectionHandler implements Runnable{
         }
     }
 
-    private void processHave(Message receivedMsg) {
+    private void processHaveMessage(Message receivedMsg) {
         HaveMessage haveMessage = (HaveMessage) receivedMsg;
         int index = (int) haveMessage.getPayload();
 
@@ -182,7 +182,7 @@ public class PeerConnectionHandler implements Runnable{
         BitTorrentState.findPeers().get(remotePeerId).assignDataRate(dataRate);
     }
 
-    private void processRequest(Message receivedMsg) {
+    private void processPeerRequest(Message receivedMsg) {
         RequestMessage requestMessage = (RequestMessage) receivedMsg;
         Integer index = (Integer) requestMessage.getPayload();
         String optimisticUnchokedPeerId = this.peerState.getCurrOptUnchPeer();
@@ -201,7 +201,7 @@ public class PeerConnectionHandler implements Runnable{
         }
     }
 
-    private void processInterested() {
+    private void processInterestedMessage() {
 
         logger.logInterestedMessageReceived(remotePeerId);
 
@@ -209,7 +209,7 @@ public class PeerConnectionHandler implements Runnable{
 
     }
 
-    private void processNotInterested() {
+    private void processNotInterestedMessage() {
         logger.logNotInterestedMessageReceived(remotePeerId);
         this.peerState.discardPeersInterested(remotePeerId);
         if (BitTorrentState.isFileDownloadedbyAll()) {
@@ -245,7 +245,7 @@ public class PeerConnectionHandler implements Runnable{
         return interestingPieces.nextSetBit(0);
     }
 
-    private void processHandshake(Message response) {
+    private void processHandShakeMessage(Message response) {
         HandshakeMessage handshakeMessage = (HandshakeMessage) response;
         this.remotePeerId = handshakeMessage.getPeerId();
         if (BitTorrentState.findPeers().containsKey(remotePeerId)) {
