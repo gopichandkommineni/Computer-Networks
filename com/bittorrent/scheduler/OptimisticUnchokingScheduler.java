@@ -43,6 +43,6 @@ public class OptimisticUnchokingScheduler extends TimerTask {
         String optimisticUnchokedPeerId = chokedNeighbours.get(0);
         currentPeerState.setCurrOptUnchPeer(optimisticUnchokedPeerId);
         currentPeerState.conList().get(optimisticUnchokedPeerId).sendMessage(new UnchokeMessage());
-        Logger.getLogger(currentPeerState.getPeerId()).logNewOptimisticallyUnchokedNeighbor(optimisticUnchokedPeerId);
+        Logger.fetchLogger(currentPeerState.getPeerId()).optimisticallyUnchokedNeighborChange(optimisticUnchokedPeerId);
     }
 }

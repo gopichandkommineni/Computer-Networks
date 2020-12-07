@@ -21,14 +21,14 @@ public class PeerProcessExecutor implements Runnable{
 	public PeerProcessExecutor(String peerId) {
 		BitTorrentState.loadPeerStateFromConfig();
 		this.peerState = BitTorrentState.findPeerStatus(peerId);
-		this.logger = Logger.getLogger(peerId);
+		this.logger = Logger.fetchLogger(peerId);
 	}
 
 	public void init() {
-		FileUtils.makeFilesAndDirectories(this.peerState.getPeerId());
+		FileUtils.createFilesAndDirectories(this.peerState.getPeerId());
 		if (peerState.isHasSharedFile()) {
 			System.out.println("Shared file found with :"+ peerState.getPeerId());
-			this.peerState.assignFilePieceIndexMap(FileUtils.splitFile());
+			this.peerState.assignFilePieceIndexMap(FileUtils.divideFile());
 		}
 		else {
 			this.peerState.assignFilePieceIndexMap(new ConcurrentHashMap<>());
@@ -79,7 +79,7 @@ public class PeerProcessExecutor implements Runnable{
 			if (currentSeqId > remotePeer.getSequenceNum()) {
 
 				try {
-					logger.logTcpConnectionTo(remotePeer.getPeerId());
+					logger.establishingConnectionTo(remotePeer.getPeerId());
 					Socket clientSocket = new Socket(remotePeer.getHostName(), remotePeer.getPort());
 					PeerConnectionHandler peerConnectionHandler = new PeerConnectionHandler(clientSocket, peerState);
 					peerConnectionHandler.assignRemotePeerId(remotePeer.getPeerId());

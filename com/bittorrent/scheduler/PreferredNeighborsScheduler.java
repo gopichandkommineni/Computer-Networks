@@ -79,6 +79,6 @@ public class PreferredNeighborsScheduler extends TimerTask {
         }
         currentPeerState.findPreferPeers().clear();
         currentPeerState.findPreferPeers().putAll(newPreferredNeighbours);
-        Logger.getLogger(this.currentPeerState.getPeerId()).logChangePreferredNeighbors(newPreferredNeighbours);
+        Logger.fetchLogger(this.currentPeerState.getPeerId()).preferredNeighborsChange(newPreferredNeighbours);
     }
 }

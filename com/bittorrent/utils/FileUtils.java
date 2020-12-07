@@ -13,33 +13,33 @@ import java.util.concurrent.*;
 
 public class FileUtils {
 
-	public static ConcurrentHashMap<Integer, byte[]> splitFile() {
-		File file = new File(PropertiesEnum.PROPERTIES_FILE_PATH.getValue() + BitTorrentState.fileName);
-		FileInputStream fileInputStream = null;
-		DataInputStream dataInputStream = null;
+	public static ConcurrentHashMap<Integer, byte[]> divideFile() {
+		File f= new File(PropertiesEnum.PROPERTIES_FILE_PATH.getValue() + BitTorrentState.fileName);
+		FileInputStream fileInStream = null;
+		DataInputStream dataInStream = null;
 		try {
-			fileInputStream = new FileInputStream(file);
-			dataInputStream = new DataInputStream(fileInputStream);
+			fileInStream = new FileInputStream(f);
+			dataInStream = new DataInputStream(fileInStream);
 
-			int numberOfPieces = BitTorrentState.pieceCount();
-			ConcurrentHashMap<Integer, byte[]> fileSplitMap = new ConcurrentHashMap<>();
+			int pieceNum = BitTorrentState.pieceCount();
+			ConcurrentHashMap<Integer, byte[]> fileDivideMap = new ConcurrentHashMap<>();
 
-			for (int i = 0; i < numberOfPieces; i++) {
-				int pieceSize = i != numberOfPieces - 1 ? BitTorrentState.findPieceLength()
+			for (int j = 0; j < pieceNum; j++) {
+				int pieceLen = j != pieceNum - 1 ? BitTorrentState.findPieceLength()
 						: (int) (BitTorrentState.findSizeOfTheFile() % BitTorrentState.findPieceLength());
-				byte[] piece = new byte[pieceSize];
-				dataInputStream.readFully(piece);
-				fileSplitMap.put(i, piece);
+				byte[] piece = new byte[pieceLen];
+				dataInStream.readFully(piece);
+				fileDivideMap.put(j, piece);
 			}
-			return fileSplitMap;
+			return fileDivideMap;
 
 		}
 		catch (IOException e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				fileInputStream.close();
-				dataInputStream.close();
+				fileInStream.close();
+				dataInStream.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -47,16 +47,16 @@ public class FileUtils {
 		return null;
 	}
 
-	public static void joinPiecesAndWriteFile(PeerState peerState) {
-		String fileNameWithPath = PropertiesEnum.PROPERTIES_CREATED_FILE_PATH.getValue() + peerState.getPeerId()
+	public static void combinePiecesAndOutputFile(PeerState peerState) {
+		String filePath = PropertiesEnum.PROPERTIES_CREATED_FILE_PATH.getValue() + peerState.getPeerId()
 				+ File.separatorChar + BitTorrentState.fileName;
-		System.out.println("Joining pieces and writing to file " + fileNameWithPath);
-		FileOutputStream outputStream = null;
+		System.out.println("Combining pieces and writing to file" + filePath);
+		FileOutputStream outStream = null;
 		try {
-			outputStream = new FileOutputStream(fileNameWithPath);
-			for (int i = 0; i < peerState.receiveFilePieceIndexMap().size(); i++) {
+			outStream = new FileOutputStream(filePath);
+			for (int j = 0; j < peerState.receiveFilePieceIndexMap().size(); j++) {
 				try {
-					outputStream.write(peerState.receiveFilePieceIndexMap().get(i));
+					outStream.write(peerState.receiveFilePieceIndexMap().get(j));
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -67,21 +67,21 @@ public class FileUtils {
 		}
 		finally {
 			try {
-				outputStream.flush();
+				outStream.flush();
 			}
-			catch (Exception ex){
-				ex.printStackTrace();
+			catch (Exception e){
+				e.printStackTrace();
 			}
 		}
 	}
 
-	public static void makeFilesAndDirectories(String peerId){
+	public static void createFilesAndDirectories(String pId){
 		try {
-			String fileNameWithPath = PropertiesEnum.PROPERTIES_CREATED_FILE_PATH.getValue() + peerId
+			String filePath = PropertiesEnum.PROPERTIES_CREATED_FILE_PATH.getValue() + pId
 					+ File.separatorChar + BitTorrentState.fileName;
-			File createdFile = new File(fileNameWithPath);
-			createdFile.getParentFile().mkdirs(); // Will create parent directories if not exists
-			createdFile.createNewFile();
+			File newFile = new File(filePath);
+			newFile.getParentFile().mkdirs(); // Will create parent directories if not exists
+			newFile.createNewFile();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -92,8 +92,8 @@ public class FileUtils {
 //		BitTorrentState.loadPeerStateFromConfig();
 //		PeerState peerState = new PeerState();
 //		FileUtils fileHandler = new FileUtils("1001");
-//		fileHandler.makeFilesAndDirectories();
-//		peerState.assignFilePieceIndexMap(fileHandler.splitFile());
-//		fileHandler.joinPiecesAndWriteFile(peerState.receiveFilePieceIndexMap());
+//		fileHandler.createFilesAndDirectories();
+//		peerState.assignFilePieceIndexMap(fileHandler.divideFile());
+//		fileHandler.combinePiecesAndOutputFile(peerState.receiveFilePieceIndexMap());
 	}
 }

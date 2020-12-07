@@ -27,7 +27,7 @@ public class PeerConnectionHandler implements Runnable{
     public PeerConnectionHandler(Socket peerSocket, PeerState peerState) {
         this.peerSocket = peerSocket;
         this.peerState = peerState;
-        this.logger = Logger.getLogger(peerState.getPeerId());
+        this.logger = Logger.fetchLogger(peerState.getPeerId());
     }
 
     public void assignRemotePeerId(String remotePeerId) {
@@ -100,12 +100,12 @@ public class PeerConnectionHandler implements Runnable{
     }
 
     private void processChokeMessage() {
-        logger.logChokingEvent(remotePeerId);
+        logger.choked(remotePeerId);
     }
 
     private void processUnChokeMessage() {
 
-        logger.logUnchokingEvent(remotePeerId);
+        logger.unchoked(remotePeerId);
 
         int interestingPieceIndex = getNextInterestingPieceIndex(BitTorrentState.findPeers().get(remotePeerId).getBitField(), this.peerState.getBitField());
 
@@ -119,7 +119,7 @@ public class PeerConnectionHandler implements Runnable{
         HaveMessage haveMessage = (HaveMessage) receivedMsg;
         int index = (int) haveMessage.getPayload();
 
-        logger.logReceivedHaveMessage(remotePeerId, index);
+        logger.receivedHaveMsg(remotePeerId, index);
 
         // set peer bitset info
         BitTorrentState.findPeers().get(remotePeerId).getBitField().set(index);
@@ -141,7 +141,7 @@ public class PeerConnectionHandler implements Runnable{
 
         if (piece.length != 0) {
             this.peerState.insertPieceIntoMap(pieceMessage.getIndex(), piece);
-            logger.logPieceDownloadComplete(remotePeerId, pieceMessage.getIndex(), this.peerState.receiveFilePieceIndexMap().size());
+            logger.pieceDownloadCompleted(remotePeerId, pieceMessage.getIndex(), this.peerState.receiveFilePieceIndexMap().size());
             broadcastMessage(new HaveMessage(pieceMessage.getIndex()));
         }
         else {
@@ -154,8 +154,8 @@ public class PeerConnectionHandler implements Runnable{
                 NotInterestedMessage notInterestedMessage = new NotInterestedMessage();
                 broadcastMessage(notInterestedMessage);
                 System.out.println(this.peerState.getBitField().nextClearBit(0));
-                FileUtils.joinPiecesAndWriteFile(this.peerState);
-                logger.logDownloadComplete();
+                FileUtils.combinePiecesAndOutputFile(this.peerState);
+                logger.fileDownloadCompleted();
                 if (BitTorrentState.isFileDownloadedbyAll()) {
                     stopAllConnections();
                 }
@@ -203,14 +203,14 @@ public class PeerConnectionHandler implements Runnable{
 
     private void processInterestedMessage() {
 
-        logger.logInterestedMessageReceived(remotePeerId);
+        logger.receivedInterestedMsg(remotePeerId);
 
         this.peerState.insertPeersInterested(remotePeerId);
 
     }
 
     private void processNotInterestedMessage() {
-        logger.logNotInterestedMessageReceived(remotePeerId);
+        logger.receivedNotInterestedMsg(remotePeerId);
         this.peerState.discardPeersInterested(remotePeerId);
         if (BitTorrentState.isFileDownloadedbyAll()) {
             stopAllConnections();
@@ -256,7 +256,7 @@ public class PeerConnectionHandler implements Runnable{
             return;
         }
         if (Integer.parseInt(this.peerState.getPeerId()) < Integer.parseInt(this.remotePeerId)) {
-            logger.logTcpConnectionFrom(this.remotePeerId);
+            logger.establishingConnectionFrom(this.remotePeerId);
             this.peerState.conList().put(this.remotePeerId, this);
         }
         BitFieldMessage bitfieldMessage = new BitFieldMessage(this.peerState.getBitField());
