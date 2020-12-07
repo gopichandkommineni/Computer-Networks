@@ -16,16 +16,16 @@ public class IncomingConnectionHandler implements Runnable{
 
     @Override
     public void run() {
-        ServerSocket serverSocket = null;
+        ServerSocket socket = null;
         try {
-            serverSocket = new ServerSocket(peerState.getPort());
-            this.peerState.assignServSocket(serverSocket);
+            socket = new ServerSocket(peerState.getPort());
+            this.peerState.assignServSocket(socket);
             while (true) {
-                System.out.println("Peer Id " + peerState.getPeerId() + " accepting connections");
-                Socket clientSocket = serverSocket.accept();
+                System.out.println("Peer Id " + peerState.getPeerId() + " receiving Incoming connections");
+                Socket clientSocket = socket.accept();
                 System.out.println("Connection is established to " + peerState.getPort() + " from " + clientSocket.getRemoteSocketAddress());
-                Thread t = new Thread(new PeerConnectionHandler(clientSocket, peerState));
-                t.start();
+                Thread th = new Thread(new PeerConnectionHandler(clientSocket, peerState));
+                th.start();
             }
         }
         catch (Exception e) {
@@ -34,9 +34,9 @@ public class IncomingConnectionHandler implements Runnable{
         }
         finally {
             try {
-                serverSocket.close();
-            } catch (IOException e1) {
-                e1.printStackTrace();
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
     }

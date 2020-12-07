@@ -10,39 +10,39 @@ import java.util.*;
 
 public class OptimisticUnchokingScheduler extends TimerTask {
 
-    private PeerState currentPeerState;
+    private PeerState livePeerState;
 
-    public OptimisticUnchokingScheduler(PeerState currentPeerState) {
-        this.currentPeerState = currentPeerState;
+    public OptimisticUnchokingScheduler(PeerState livePeerState) {
+        this.livePeerState = livePeerState;
     }
 
     @Override
     public void run() {
-        System.out.println("OptimisticUnchokingTask: start");
+        System.out.println("OptimisticUnchokingTask: Begin");
 
-        if (currentPeerState.findPeersInterested().isEmpty()) {
-            System.out.println("OptimisticUnchokingTask: No interested neighbors for " + this.currentPeerState.getPeerId());
+        if (livePeerState.findPeersInterested().isEmpty()) {
+            System.out.println("OptimisticUnchokingTask: No interested neighbors for " + this.livePeerState.getPeerId());
             return;
         }
 
-        List<String> chokedNeighbours = new ArrayList<>();
+        List<String> alreadyChokedNeighbours = new ArrayList<>();
 
-        for (String peerId: currentPeerState.findPeersInterested().values()) {
-            if (peerId.equals(currentPeerState.getPeerId())) {
+        for (String pId: livePeerState.findPeersInterested().values()) {
+            if (pId.equals(livePeerState.getPeerId())) {
                 continue;
             }
-            if (!currentPeerState.findPreferPeers().containsKey(peerId)) {
-                chokedNeighbours.add(peerId);
+            if (!livePeerState.findPreferPeers().containsKey(pId)) {
+                alreadyChokedNeighbours.add(pId);
             }
         }
-        if (chokedNeighbours.isEmpty()) {
+        if (alreadyChokedNeighbours.isEmpty()) {
             System.out.println("OptimisticUnchokingTask: No choked neighbors!");
             return;
         }
-        Collections.shuffle(chokedNeighbours);
-        String optimisticUnchokedPeerId = chokedNeighbours.get(0);
-        currentPeerState.setCurrOptUnchPeer(optimisticUnchokedPeerId);
-        currentPeerState.conList().get(optimisticUnchokedPeerId).sendMessage(new UnchokeMessage());
-        Logger.fetchLogger(currentPeerState.getPeerId()).optimisticallyUnchokedNeighborChange(optimisticUnchokedPeerId);
+        Collections.shuffle(alreadyChokedNeighbours);
+        String optimisticUnchokedId = alreadyChokedNeighbours.get(0);
+        livePeerState.setCurrOptUnchPeer(optimisticUnchokedId);
+        livePeerState.conList().get(optimisticUnchokedId).sendMessage(new UnchokeMessage());
+        Logger.fetchLogger(livePeerState.getPeerId()).optimisticallyUnchokedNeighborChange(optimisticUnchokedId);
     }
 }
