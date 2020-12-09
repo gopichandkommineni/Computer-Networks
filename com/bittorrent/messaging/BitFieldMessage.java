@@ -5,13 +5,13 @@ import java.util.BitSet;
 public class BitFieldMessage extends ActualMessage {
 
     public BitFieldMessage(BitSet bitField) {
-        super.setMessageType(MessageType.BITFIELD);
+        super.assignMsgType(MessageType.BITFIELD);
         Object payload = bitField;
-        super.setLength(1 + bitField.size());
-        super.setPayload(payload);
+        super.assignLen(1 + bitField.size());
+        super.assignPayLoad(payload);
     }
 
-    public BitSet getPayload() {
-        return (BitSet) super.getPayload();
+    public BitSet findPayLoad() {
+        return (BitSet) super.findPayLoad();
     }
 }

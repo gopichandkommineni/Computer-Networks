@@ -94,18 +94,20 @@ public class BitTorrentState {
 	}
 
 	public static String findPathOfLogFile() {
-		return PropertiesEnum.PEER_LOG_FILE_PATH.getValue();
+		return System.getProperty("user.dir") + File.separatorChar
+		+ "project/log_peer_";
 	}
 
 	public static String findPeerLogExt() {
-		return PropertiesEnum.PEER_LOG_FILE_EXTENSION.getValue();
+		return ".log";
 	}
 
 	public static void createPeerMap() {
 		Scanner sc = null;
 		int seq = 1;
 		try {
-			sc = new Scanner(new File(PropertiesEnum.PEER_PROPERTIES_CONFIG_PATH.getValue()));
+			sc = new Scanner(new File(System.getProperty("user.dir") + File.separatorChar
+			+ "PeerInfo.cfg"));
 			while (sc.hasNextLine()) {
 				String arr[] = sc.nextLine().split(" ");
 				PeerState peer = new PeerState();
@@ -149,19 +151,19 @@ public class BitTorrentState {
 			throw new RuntimeException("File not found : " + ex.getMessage());
 		}
 
-		fileName = properties.get(PropertiesEnum.FILENAME.getValue()).toString();
-		fileSize = Long.parseLong(properties.get(PropertiesEnum.FILESIZE.getValue()).toString());
+		fileName = properties.get("FileName").toString();
+		fileSize = Long.parseLong(properties.get("FileSize").toString());
 		numberOfPreferredNeighbors = 
-				Integer.parseInt(properties.get(PropertiesEnum.NUMBER_OF_PREFERRED_NEIGHBORS.getValue()).toString());
+				Integer.parseInt(properties.get("NumberOfPreferredNeighbors").toString());
 		optimisticUnchokingInterval =
-				Integer.parseInt(properties.get(PropertiesEnum.OPTIMISTIC_UNCHOKING_INTERVAL.getValue()).toString());
-		pieceSize = Integer.parseInt(properties.getProperty(PropertiesEnum.PIECESIZE.getValue()));
+				Integer.parseInt(properties.get("OptimisticUnchokingInterval").toString());
+		pieceSize = Integer.parseInt(properties.getProperty("PieceSize"));
 		unchokingInterval =
-				Integer.parseInt(properties.getProperty(PropertiesEnum.UNCHOKING_INTERVAL.getValue()));
+				Integer.parseInt(properties.getProperty("UnchokingInterval"));
 		calAndAssignPieceCount();
 
-		System.out.println(PropertiesEnum.PROPERTIES_FILE_PATH.getValue());
-		System.out.println(PropertiesEnum.PROPERTIES_FILE_PATH.getValue() + BitTorrentState.fileName);
+		System.out.println(System.getProperty("user.dir") + File.separatorChar);
+		System.out.println(System.getProperty("user.dir") + File.separatorChar + BitTorrentState.fileName);
 
 		createPeerMap();
 
@@ -176,5 +178,6 @@ public class BitTorrentState {
 		}
 		return true;
 	}
+
 
 }

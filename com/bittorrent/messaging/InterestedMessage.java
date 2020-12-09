@@ -3,9 +3,9 @@ package com.bittorrent.messaging;
 public class InterestedMessage extends ActualMessage {
 
     public InterestedMessage(){
-        super.setMessageType(MessageType.INTERESTED);
-        super.setLength(1);
-        super.setPayload("");
+        super.assignMsgType(MessageType.INTERESTED);
+        super.assignLen(1);
+        super.assignPayLoad("");
     }
 
 }

@@ -6,9 +6,9 @@ public class PieceMessage extends ActualMessage{
 
     public PieceMessage(byte[] payload, int index) {
         this.index = index;
-        super.setMessageType(MessageType.PIECE);
-        super.setLength(5 + payload.length);
-        super.setPayload(payload);
+        super.assignMsgType(MessageType.PIECE);
+        super.assignLen(5 + payload.length);
+        super.assignPayLoad(payload);
     }
 
     public int getIndex() {

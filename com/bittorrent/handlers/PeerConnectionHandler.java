@@ -47,10 +47,10 @@ public class PeerConnectionHandler implements Runnable{
             while (running) {
                 receivedMsg = receiveMessage();
                 System.out.println(this.peerState.getPeerId() + ": Received message type: " +
-                        receivedMsg.getMessageType().name() + " from " + this.remotePeerId + ", message: " +
+                        receivedMsg.findMsgType().name() + " from " + this.remotePeerId + ", message: " +
                         receivedMsg.toString());
 
-                switch (receivedMsg.getMessageType()) {
+                switch (receivedMsg.findMsgType()) {
                     case HANDSHAKE: {
                         processHandShakeMessage(receivedMsg);
                         break;
@@ -117,7 +117,7 @@ public class PeerConnectionHandler implements Runnable{
 
     private void processHaveMessage(Message receivedMsg) {
         HaveMessage haveMessage = (HaveMessage) receivedMsg;
-        int index = (int) haveMessage.getPayload();
+        int index = (int) haveMessage.findPayLoad();
 
         logger.receivedHaveMsg(remotePeerId, index);
 
@@ -136,7 +136,7 @@ public class PeerConnectionHandler implements Runnable{
         stopTime = System.currentTimeMillis();
         PieceMessage pieceMessage = (PieceMessage) receivedMsg;
         System.out.println("Received piece index: " + pieceMessage.getIndex());
-        byte[] piece = (byte[]) pieceMessage.getPayload();
+        byte[] piece = (byte[]) pieceMessage.findPayLoad();
         assignDataRate(piece.length);
 
         if (piece.length != 0) {
@@ -184,7 +184,7 @@ public class PeerConnectionHandler implements Runnable{
 
     private void processPeerRequest(Message receivedMsg) {
         RequestMessage requestMessage = (RequestMessage) receivedMsg;
-        Integer index = (Integer) requestMessage.getPayload();
+        Integer index = (Integer) requestMessage.findPayLoad();
         String optimisticUnchokedPeerId = this.peerState.getCurrOptUnchPeer();
         if (this.peerState.findPreferPeers().contains(remotePeerId) || (optimisticUnchokedPeerId != null &&
                 optimisticUnchokedPeerId.equals(remotePeerId))) {
@@ -220,9 +220,9 @@ public class PeerConnectionHandler implements Runnable{
     private void processBitField(Message message){
         BitFieldMessage bitFieldMessage = (BitFieldMessage) message;
 
-        BitTorrentState.findPeers().get(remotePeerId).assignBitfieldValue(bitFieldMessage.getPayload());
+        BitTorrentState.findPeers().get(remotePeerId).assignBitfieldValue(bitFieldMessage.findPayLoad());
 
-        int interestingPieceIndex = getNextInterestingPieceIndex(bitFieldMessage.getPayload(), this.peerState.getBitField());
+        int interestingPieceIndex = getNextInterestingPieceIndex(bitFieldMessage.findPayLoad(), this.peerState.getBitField());
 
         if (interestingPieceIndex == -1) {
             NotInterestedMessage notInterestedMessage = new NotInterestedMessage();
@@ -272,7 +272,7 @@ public class PeerConnectionHandler implements Runnable{
     }
 
     public synchronized void sendMessage(Message message) {
-        System.out.println(this.peerState.getPeerId() + ": Sending " + message.getMessageType().name() + " message: " + message.toString());
+        System.out.println(this.peerState.getPeerId() + ": Sending " + message.findMsgType().name() + " message: " + message.toString());
         try {
             os.writeObject(message);
             os.flush();

@@ -7,7 +7,7 @@ public class HandshakeMessage extends Message {
     private String peerId;
 
     public HandshakeMessage(String peerId) {
-        this.setMessageType(MessageType.HANDSHAKE);
+        this.assignMsgType(MessageType.HANDSHAKE);
         this.peerId = peerId;
     }
 

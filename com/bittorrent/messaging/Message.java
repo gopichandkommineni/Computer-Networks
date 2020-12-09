@@ -8,11 +8,11 @@ public abstract class Message implements Serializable {
 
     private MessageType messageType = null;
 
-    public MessageType getMessageType() {
+    public MessageType findMsgType() {
         return messageType;
     }
 
-    public void setMessageType(MessageType messageType) {
+    public void assignMsgType(MessageType messageType) {
         this.messageType = messageType;
     }
 
