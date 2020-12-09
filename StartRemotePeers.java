@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.bittorrent.utils.PropertiesEnum;
+//import bittorrent.utils.PropertiesEnum;
 
 public class StartRemotePeers {
 
@@ -14,7 +14,8 @@ public class StartRemotePeers {
         Scanner sc = null;
         int seq = 1;
         try {
-            sc = new Scanner(new File(PropertiesEnum.PEER_PROPERTIES_CONFIG_PATH.getValue()));
+            sc = new Scanner(new File(System.getProperty("user.dir") + File.separatorChar
+			+ "PeerInfo.cfg"));
             while (sc.hasNextLine()) {
                 String arr[] = sc.nextLine().split(" ");
                 if (arr.length > 0) {

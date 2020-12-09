@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-import com.bittorrent.main.*;
+import bittorrent.main.*;
 
 public class peerProcess {
 
