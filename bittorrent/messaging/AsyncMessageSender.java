@@ -1,8 +1,8 @@
 package bittorrent.messaging;
 
-import bittorrent.state.BitTorrentState;
-import bittorrent.state.PeerState;
-import bittorrent.conn.PeerConnectionHandler;
+import bittorrent.state.BitTorrentStatus;
+import bittorrent.state.PeerStatus;
+import bittorrent.conn.PeerConnectionManager;
 import bittorrent.messaging.Message;
 
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -21,7 +21,7 @@ public class AsyncMessageSender implements Runnable {
         try {
             running.set(true);
             System.out.println("Async running "+BitTorrentState.findPeers().keySet().toString());
-            PeerState peerState = BitTorrentState.findPeers().get(this.peerId);
+            PeerStatus peerState = BitTorrentState.findPeers().get(this.peerId);
             while (running.get()) {
                 Message message = peerState.getBlockingPeers().take();
                 System.out.println(peerId + ": Removed from queue " + message.getMessageType());

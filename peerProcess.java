@@ -8,7 +8,7 @@ public class peerProcess {
 
 	public static void main (String args[]) {
 		String[] peers = new String[] {"1001", "1002", "1003"};
-		PeerProcessExecutor peerProcessExecutor = null;
+		PeerSharingInit peerProcessExecutor = null;
 
 		for (String arg: args){
 			if (arg.equals("-s")){
@@ -18,16 +18,16 @@ public class peerProcess {
 
 		if (simulate) {
 			for (String peerId: peers) {
-				Thread t = new Thread(new PeerProcessExecutor(peerId));
+				Thread t = new Thread(new PeerSharingInit(peerId));
 				t.start();
 			}
 		}
 		else {
 			if (args.length > 0) {
-				peerProcessExecutor = new PeerProcessExecutor(args[0]);
+				peerProcessExecutor = new PeerSharingInit(args[0]);
 			} else {
 				//default value
-				peerProcessExecutor = new PeerProcessExecutor("1001");
+				peerProcessExecutor = new PeerSharingInit("1001");
 			}
 			peerProcessExecutor.init();
 		}
