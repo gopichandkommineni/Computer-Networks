@@ -1,6 +1,6 @@
 package bittorrent.utils;
 
-import bittorrent.dtos.BitTorrentState;
+import bittorrent.state.BitTorrentState;
 
 import java.io.File;
 import java.io.FileOutputStream;

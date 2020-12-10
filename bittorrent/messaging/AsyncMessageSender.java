@@ -1,8 +1,8 @@
 package bittorrent.messaging;
 
-import bittorrent.dtos.BitTorrentState;
-import bittorrent.dtos.PeerState;
-import bittorrent.handlers.PeerConnectionHandler;
+import bittorrent.state.BitTorrentState;
+import bittorrent.state.PeerState;
+import bittorrent.conn.PeerConnectionHandler;
 import bittorrent.messaging.Message;
 
 import java.util.concurrent.atomic.AtomicBoolean;

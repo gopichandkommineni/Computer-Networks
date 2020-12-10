@@ -1,7 +1,7 @@
 package bittorrent.scheduler;
 
-import bittorrent.dtos.BitTorrentState;
-import bittorrent.dtos.PeerState;
+import bittorrent.state.BitTorrentState;
+import bittorrent.state.PeerState;
 import bittorrent.messaging.ChokeMessage;
 import bittorrent.messaging.UnchokeMessage;
 import bittorrent.utils.Logger;

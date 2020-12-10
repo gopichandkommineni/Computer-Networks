@@ -8,7 +8,7 @@ public class StartRemotePeers {
 
     public static void main(String[] args) {
 
-        String path = "bittorrent-simulator/";
+        String path = "Computer-Networks/";
 
         ArrayList<PeerInfo> peerList = new ArrayList<>();
         Scanner sc = null;
@@ -32,9 +32,10 @@ public class StartRemotePeers {
         for (PeerInfo pInfo : peerList) {
             try {
                 Thread.sleep(1000);
-                System.out.println("Start remote peer " + pInfo.getPeerID() + " at " + pInfo.getHostName());
-                Runtime.getRuntime().exec("ssh -i .ssh/id_rsa ksingh@" + pInfo.getHostName() + " cd " + path +
+                
+                Runtime.getRuntime().exec("ssh -i .ssh/id_rsa gopichan@" + pInfo.getHostName() + " cd " + path +
                         "; java peerProcess " + pInfo.getPeerID() + " > " + pInfo.peerID + "console.log");
+                System.out.println("Start remote peer " + pInfo.getPeerID() + " at " + pInfo.getHostName());
             }
             catch (IOException e) {
                 e.printStackTrace();
