@@ -12,6 +12,7 @@ public class PreferredNeighborsSelector extends TimerTask {
     private PeerStatus livePeerStatus;
     private PriorityQueue<PeerStatus> maxHeap;
 
+    //constructor
     public PreferredNeighborsSelector(PeerStatus livePeerStatus) {
         this.livePeerStatus = livePeerStatus;
         this.maxHeap = new PriorityQueue<>(BitTorrentStatus.numberOfPreferredNeighbors,
@@ -40,7 +41,6 @@ public class PreferredNeighborsSelector extends TimerTask {
         System.out.println("PreferredNeighborsTask: maxHeapSize - "+maxHeap.size());
 
 
-
         Map<String, String> previousPreferredNeighbours = new HashMap<>();
         previousPreferredNeighbours.putAll(livePeerStatus.findPreferPeers());
 
@@ -49,19 +49,19 @@ public class PreferredNeighborsSelector extends TimerTask {
             if (maxHeap.size() > 0) {
                 String pId = maxHeap.poll().getPeerId();
                 if (livePeerStatus.getPeerId().equals(pId)) {
-                    // this should not happen
                     j--;
                     continue;
                 }
                 nextPreferredNeighbours.put(pId, pId);
                 if (!previousPreferredNeighbours.containsKey(pId)) {
-                    //System.out.println(this.currentPeerId + ": sending UNCHOKE to "+pId);
+
                     if (livePeerStatus.conList().size() > 0) {
                         livePeerStatus.conList().get(pId).sendMessage(new UnchokeMessage());
                     }
                 }
             }
             else {
+                // heap is empty
                 System.out.println("maxHeap empty");
             }
         }
@@ -71,7 +71,7 @@ public class PreferredNeighborsSelector extends TimerTask {
                 continue;
             }
             if (!nextPreferredNeighbours.containsKey(pId)) {
-                //System.out.println(this.currentPeerId + ": sending CHOKE to "+pId);
+
                 if (livePeerStatus.conList().size() > 0) {
                     livePeerStatus.conList().get(pId).sendMessage(new ChokeMessage());
                 }

@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class PeerStatus {
+public class 	PeerStatus {
 
 	private int seqID;
 	private String pID;
@@ -34,52 +34,62 @@ public class PeerStatus {
 	private AtomicBoolean downloadComplete = new AtomicBoolean(false);
 
 	public String getCurrOptUnchPeer() {
-		// return current optimistic unchocking peers
+
+		// gives the current optimistic unchocked peers
 		return optimisticUnchokedPeerId;
 	}
 
 	public void setCurrOptUnchPeer(String optimisticUnchokedPeerId) {
-		// set which peers are currently optimistically unchocked
+
+		// sets the current optimistic unchocked peers
 		this.optimisticUnchokedPeerId = optimisticUnchokedPeerId;
 	}
 
 	public boolean downloadCheck() {
-		// check if the file is downloaded or not
+
+		// verify whether the file is downloaded
 		return downloadComplete.get();
 	}
 
 	public void setDownloadCheck(boolean value) {
-		// if the file is downloaded set it as downloaded
+
+		// set the file as downloaded if the download is complete
 		this.downloadComplete.set(value);
 	}
 
 	public ConcurrentHashMap<String, PeerConnectionManager> conList() {
-		// return the connection list
+
+		// gives the list of connections
 		return connections;
 	}
 
 	public ServerSocket findServSocket() {
-		// find the server socket
+
+		// gives the server socket
 		return serverSocket;
 	}
 
 	public void assignServSocket(ServerSocket serverSocket) {
-		// set the server socket
+
+		// sets the server socket
 		this.serverSocket = serverSocket;
 	}
 
 	public void setTimer1(Timer timer1) {
-		// set timer for download
+
+		// sets timer1 for downloading
 		this.timer1 = timer1;
 	}
 
 	public void setTimer2(Timer timer2) {
-		// set timer for download
+
+		// sets timer2 for downloading
 		this.timer2 = timer2;
 	}
 
 	public void blockAllTasks() {
-		// Block the remaining Tasks
+
+		// stop the scheduler Tasks
 		System.out.println(getPeerId() + ": stopping scheduler tasks");
 		timer1.cancel();
 		timer1.purge();
@@ -88,68 +98,81 @@ public class PeerStatus {
 	}
 
 	public void assignNewInterestedPeers(Map<String, String> interestedNeighbours) {
-		// find and set new peers interested in file
+
+		// search and set the new peers that are interested in the file
 		this.interestedNeighbours = interestedNeighbours;
 	}
 
 	public double findDataRate() {
-		// return the download data rate
+
+		// gives the data rate for download
 		return dataRate;
 	}
 
 	public void assignDataRate(double dataRate) {
-		// set the download data rate
+
+		// sets the data rate for download
 		this.dataRate = dataRate;
 	}
 
 	public BlockingQueue<Message> getBlockingPeers(){
-		// return Queue containing peers that are blocked
+
+		// gives a Queue which consists of blocked peers
 		return queue;
 	}
 
 	public synchronized void insertPieceIntoMap(int index, byte[] piece) {
-		// insert file piece in file map
+
+		// put file piece to file map
 		this.fileSplitMap.put(index, piece);
 		this.bitField.set(index);
 	}
 
 	public Map<String, String> findPeersInterested() {
-		// get interested peers list
+
+		// gives list of interested peers
 		return interestedNeighbours;
 	}
 
 	public int numOfPreferNeighbours(){
-		// return no of preferred neighbours
+
+		// gives preferred neighbours count
 		return preferredNeighbours.size();
 	}
 
 	public void discardPeersInterested(String pID) {
-		// remove peers interested 
+
+		// discards the interested peers
 		interestedNeighbours.remove(pID);
 	}
 
 	public void insertPeersInterested(String pID) {
-		// add new peers that are interested
+
+		// puts new interested peers
 		this.interestedNeighbours.put(pID, pID);
 	}
 
 	public void putPreferredNeighbours(String pID) {
-		// add preferred neighbours into the list
+
+		// puts preferred neighbours to list
 		preferredNeighbours.put(pID, pID);
 	}
 
 	public void assignBitfieldValue(BitSet bitField) {
-		// assign new bitfield value
+
+		// allocates a new bitfield value
 		this.bitField = bitField;
 	}
 
 	public ConcurrentHashMap<Integer, byte[]> receiveFilePieceIndexMap() {
-		// get the map that stored file pieces
+
+		// gives the map that has file pieces
 		return fileSplitMap;
 	}
 
 	public void assignFilePieceIndexMap(ConcurrentHashMap<Integer, byte[]> fileSplitMap) {
-		// create file piece index map
+
+		// generate file piece index map
 		this.fileSplitMap = fileSplitMap;
 	}
 
@@ -158,7 +181,8 @@ public class PeerStatus {
 	}
 
 	public void assignPeferPeers(ConcurrentHashMap<String, String> preferredNeighbours) {
-		// find and set preferred peers
+
+		// determines and sets preferred peers
 		this.preferredNeighbours = preferredNeighbours;
 	}
 
@@ -195,7 +219,8 @@ public class PeerStatus {
 	}
 
 	public void containsFile(boolean hasSharedFile) {
-		// check if the peer has file
+
+		// verify whether the peer has file
 		if (hasSharedFile) {
 			if (this.bitField == null) {
 				this.bitField = new BitSet(BitTorrentStatus.pieceCount());
@@ -207,22 +232,26 @@ public class PeerStatus {
 	}
 
 	public boolean checkFileStatus(){
-		// check if the file is downloaded or not
+
+		// verify whether the file is downloaded
 		return fileReceived;
 	}
 
 	public void assignFileStatus(boolean fileReceived) {
-		// set the file status
+
+		// sets the status of the file
 		this.fileReceived = fileReceived;
 	}
 
 	public int getSequenceNum() {
-		// return sequence number
+
+		// gives the sequence number
 		return seqID;
 	}
 
 	public void assignSequenceNum(int seqID) {
-		// give a seq num
+
+		// assigns a sequence number
 		this.seqID = seqID;
 	}
 
@@ -250,10 +279,6 @@ public class PeerStatus {
 	}
 
 	public static void main(String args[]) {
-//		BitSet bitSet = new BitSet(5);
-//		BitSet bitSet1 = new BitSet(5);
-//		bitSet.set(0);
-//		bitSet1.set(0,4);
-//		System.out.println(bitSet.g);
+
 	}
 }

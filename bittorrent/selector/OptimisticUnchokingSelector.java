@@ -12,6 +12,7 @@ public class OptimisticUnchokingSelector extends TimerTask {
 
     private PeerStatus livePeerStatus;
 
+    //constructor
     public OptimisticUnchokingSelector(PeerStatus livePeerStatus) {
         this.livePeerStatus = livePeerStatus;
     }
@@ -35,6 +36,7 @@ public class OptimisticUnchokingSelector extends TimerTask {
                 alreadyChokedNeighbours.add(pId);
             }
         }
+        // in case of no choked neighbours
         if (alreadyChokedNeighbours.isEmpty()) {
             System.out.println("OptimisticUnchokingTask: No choked neighbors!");
             return;

@@ -18,6 +18,7 @@ public class PeerSharingInit implements Runnable{
 	private PeerStatus peerState;
 	private Logger logger;
 
+	//constructor
 	public PeerSharingInit(String peerId) {
 		BitTorrentStatus.loadPeerStatusFromConfig();
 		this.peerState = BitTorrentStatus.findPeerStatus(peerId);
@@ -37,20 +38,20 @@ public class PeerSharingInit implements Runnable{
 		BitTorrentStatus.displayConfig();
 		System.out.println(peerState);
 
-		// accept incoming connections
+		// acknowledging the incoming peer connections
 		Thread t = new Thread(new InboundConnectionManager(peerState));
 		t.start();
 
-		// create outgoing connections
+		// Generate outgoing peer connections
 		createOutgoingConnections();
 
-		// Periodically select preferred neighbors for this peer
+		// Regularly choose preferred neighbors for this peer
 		Timer timer1 = new Timer();
 		PreferredNeighborsSelector preferredNeighborsScheduler = new PreferredNeighborsSelector(peerState);
 		timer1.scheduleAtFixedRate(preferredNeighborsScheduler, 200, BitTorrentStatus.findUnchokingInterval() * 1000);
 		this.peerState.setTimer1(timer1);
 
-		// Start OptimisticUnchokedPeerScheduler
+		// Begin OptimisticUnchokingSelector
 		Timer timer2 = new Timer();
 		OptimisticUnchokingSelector optimisticUnchokingScheduler = new OptimisticUnchokingSelector(peerState);
 		timer2.scheduleAtFixedRate(optimisticUnchokingScheduler, 500, BitTorrentStatus.findOptUnchokingInterval() * 1000);
@@ -67,6 +68,8 @@ public class PeerSharingInit implements Runnable{
 	public void run() {
 		init();
 	}
+
+	// Creating outgoing peer Connections
 
 	public void createOutgoingConnections() {
 

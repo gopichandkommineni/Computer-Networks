@@ -7,6 +7,7 @@ public class peerProcess {
 	private static boolean simulate = false;
 
 	public static void main (String args[]) {
+
 		String[] peers = new String[] {"1001", "1002", "1003"};
 		PeerSharingInit peerProcessExecutor = null;
 
@@ -16,6 +17,8 @@ public class peerProcess {
 			}
 		}
 
+		// Starting the peer Connections
+
 		if (simulate) {
 			for (String peerId: peers) {
 				Thread t = new Thread(new PeerSharingInit(peerId));
@@ -24,8 +27,12 @@ public class peerProcess {
 		}
 		else {
 			if (args.length > 0) {
+
+				//Fetching peerId from arguments
 				peerProcessExecutor = new PeerSharingInit(args[0]);
+
 			} else {
+
 				//default value
 				peerProcessExecutor = new PeerSharingInit("1001");
 			}

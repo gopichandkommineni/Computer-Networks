@@ -24,6 +24,7 @@ public class PeerConnectionManager implements Runnable{
     private boolean running = false;
     private Thread asyncMessageSender;
 
+    //constructor
     public PeerConnectionManager(Socket peerSocket, PeerStatus peerState) {
         this.peerSocket = peerSocket;
         this.peerState = peerState;
@@ -31,7 +32,8 @@ public class PeerConnectionManager implements Runnable{
     }
 
     public void assignRemotePeerId(String remotePeerId) {
-        // assign remote peerId to Peer
+
+        // allotting peer, a remote peer Id
         this.remotePeerId = remotePeerId;
     }
 
@@ -42,17 +44,19 @@ public class PeerConnectionManager implements Runnable{
             running = true;
             os = new ObjectOutputStream(peerSocket.getOutputStream());
 
-            // send new handshake message to new connection 
+            // sending a new handshake msg to the new peer connection
             sendMessage(new HandshakeMessage(this.peerState.getPeerId()));
 
             Message receivedMsg = null;
             while (running) {
                 receivedMsg = receiveMessage();
-                // received message from peer
+
+                // obtained message from the peer
                 System.out.println(this.peerState.getPeerId() + ": Received message type: " +
                         receivedMsg.findMsgType().name() + " from " + this.remotePeerId + ", message: " +
                         receivedMsg.toString());
 
+                // determine the type of message
                 switch (receivedMsg.findMsgType()) {
                     case HANDSHAKE: {
                         processHandShakeMessage(receivedMsg);
@@ -97,18 +101,21 @@ public class PeerConnectionManager implements Runnable{
         }
         catch (Exception ex)
         {
+            // exit in case of exception
             System.out.println(this.peerState.getPeerId() + ": Exiting PeerConnectionManager because of " + ex.getStackTrace()[0]);
             stop();
         }
     }
 
     private void processChokeMessage() {
-        // if it is chocke message log it
+
+        // Logging choked message
         logger.choked(remotePeerId);
     }
 
     private void processUnChokeMessage() {
-        // write message to log file and process the next interested piece
+
+        // output the message to log file and continue with the next interested piece
         logger.unchoked(remotePeerId);
 
         int interestingPieceIndex = getNextInterestingPieceIndex(BitTorrentStatus.findPeers().get(remotePeerId).getBitField(), this.peerState.getBitField());
@@ -121,13 +128,13 @@ public class PeerConnectionManager implements Runnable{
 
     private void processHaveMessage(Message receivedMsg) {
 
-        // if the peer have the piece send interested message 
+        // forward interested message in case peer has the piece
         HaveMessage haveMessage = (HaveMessage) receivedMsg;
         int index = (int) haveMessage.findPayLoad();
 
         logger.receivedHaveMsg(remotePeerId, index);
 
-        // set peer bitset info
+        // setting the peer bitset information
         BitTorrentStatus.findPeers().get(remotePeerId).getBitField().set(index);
 
         if (!this.peerState.getBitField().get(index)) {
@@ -139,10 +146,12 @@ public class PeerConnectionManager implements Runnable{
     }
 
     private void processPiece(Message receivedMsg) {
-        // logg the piece as received 
-        // process the piece and put it in File Piece Map
-        // find the next piece that is needed
-        //  broadcast the piece index needed
+
+        // log the piece when received
+        // set it in File Piece map after processing the piece
+        // deterine the next piece that is required
+        //  broadcast the required piece index
+
         stopTime = System.currentTimeMillis();
         PieceMessage pieceMessage = (PieceMessage) receivedMsg;
         System.out.println("Received piece index: " + pieceMessage.getIndex());
@@ -180,7 +189,8 @@ public class PeerConnectionManager implements Runnable{
     }
 
     private void assignDataRate(int size) {
-        // change and set appropriate Data rate
+
+        // alter and set suitable data rate
         double dataRate;
         if (Math.abs(stopTime - startTime) > 0) {
             dataRate = size / (stopTime - startTime);
@@ -194,7 +204,8 @@ public class PeerConnectionManager implements Runnable{
     }
 
     private void processPeerRequest(Message receivedMsg) {
-        // receive and process request from the peer.
+
+        // gather and process the request message from peer.
         RequestMessage requestMessage = (RequestMessage) receivedMsg;
         Integer index = (Integer) requestMessage.findPayLoad();
         String optimisticUnchokedPeerId = this.peerState.getCurrOptUnchPeer();
@@ -215,7 +226,7 @@ public class PeerConnectionManager implements Runnable{
 
     private void processInterestedMessage() {
 
-        // receive interested message from peer and process it.
+        // get interested message from the peer and process the message
 
         logger.receivedInterestedMsg(remotePeerId);
 
@@ -225,7 +236,7 @@ public class PeerConnectionManager implements Runnable{
 
     private void processNotInterestedMessage() {
 
-        //  logg not interested message from peer and process not inerested message
+        //  log and process the not interested message from peer
         logger.receivedNotInterestedMsg(remotePeerId);
         this.peerState.discardPeersInterested(remotePeerId);
         if (BitTorrentStatus.isFileDownloadedbyAll()) {
@@ -234,7 +245,8 @@ public class PeerConnectionManager implements Runnable{
     }
 
     private void processBitField(Message message){
-        // Receive BitField Message and process the msg
+
+        // get the BitField Message and process it
         BitFieldMessage bitFieldMessage = (BitFieldMessage) message;
 
         BitTorrentStatus.findPeers().get(remotePeerId).assignBitfieldValue(bitFieldMessage.findPayLoad());
@@ -243,7 +255,7 @@ public class PeerConnectionManager implements Runnable{
 
         if (interestingPieceIndex == -1) {
             NotInterestedMessage notInterestedMessage = new NotInterestedMessage();
-            //sendMessage(notInterestedMessage);
+
         }
         else {
             InterestedMessage interestedMessage = new InterestedMessage();
@@ -257,7 +269,7 @@ public class PeerConnectionManager implements Runnable{
 
     private int getNextInterestingPieceIndex(BitSet remote, BitSet current) {
 
-        // Find the Index of Next Interested Piece
+        // obtain the next interested piece Index
         BitSet interestingPieces = new BitSet();
         interestingPieces.or(remote);
         interestingPieces.andNot(current);
@@ -266,7 +278,7 @@ public class PeerConnectionManager implements Runnable{
 
     private void processHandShakeMessage(Message response) {
 
-        // recieve Handshake message from User and process it.
+        // get the handshake message from User and process the message
         HandshakeMessage handshakeMessage = (HandshakeMessage) response;
         this.remotePeerId = handshakeMessage.getPeerId();
         if (BitTorrentStatus.findPeers().containsKey(remotePeerId)) {
@@ -286,7 +298,7 @@ public class PeerConnectionManager implements Runnable{
 
     public Message receiveMessage() throws IOException, ClassNotFoundException {
 
-        // Process Received Message
+        // Process the acquired message
         if (is == null) {
             is = new ObjectInputStream(peerSocket.getInputStream());
         }
@@ -295,7 +307,8 @@ public class PeerConnectionManager implements Runnable{
     }
 
     public synchronized void sendMessage(Message message) {
-        // Send Message to the peer
+
+        // forward the message to peer
         System.out.println(this.peerState.getPeerId() + ": Sending " + message.findMsgType().name() + " message: " + message.toString());
         try {
             os.writeObject(message);
@@ -326,7 +339,7 @@ public class PeerConnectionManager implements Runnable{
     public void stop() {
         try {
             System.out.println(this.peerState.getPeerId() + ": Stopping tasks");
-            //asyncMessageSender.interrupt();
+
             this.peerState.blockAllTasks();
             this.peerState.findServSocket().close();
             running = false;

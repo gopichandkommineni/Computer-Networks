@@ -10,13 +10,17 @@ public class InboundConnectionManager implements Runnable{
 
     private PeerStatus peerState;
 
+    //constructor
     public InboundConnectionManager(PeerStatus peerState) {
         this.peerState = peerState;
     }
 
     @Override
     public void run() {
-        // thread to accept the incoming peer connections and create new threads for connections between 2 peers
+
+        // this is a thread for accepting the incoming peer connections
+        // and for creating new threads to establish connections among two peers
+
         ServerSocket socket = null;
         try {
             socket = new ServerSocket(peerState.getPort());
@@ -31,10 +35,12 @@ public class InboundConnectionManager implements Runnable{
         }
         catch (Exception e) {
 
+            //exit in case of exception
             System.out.println(this.peerState.getPeerId() + ": Exiting InboundConnectionManager!");
         }
         finally {
             try {
+                // closing the socket
                 socket.close();
             } catch (IOException e) {
                 e.printStackTrace();

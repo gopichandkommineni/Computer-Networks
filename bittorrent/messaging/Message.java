@@ -1,7 +1,10 @@
 package bittorrent.messaging;
 
 import java.io.Serializable;
+/*
+    This is The Message Class with type of the message
 
+*/
 public abstract class Message implements Serializable {
 
     public static final long serialVersionUID = 1L;

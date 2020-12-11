@@ -82,6 +82,8 @@ public class FileOps {
 			+ "project/peer_" + pId
 					+ File.separatorChar + BitTorrentStatus.fileName;
 			File newFile = new File(filePath);
+
+			// creates the parent directories if not present
 			newFile.getParentFile().mkdirs(); // Will create parent directories if not exists
 			newFile.createNewFile();
 		} catch (IOException e) {
@@ -90,12 +92,6 @@ public class FileOps {
 	}
 
 	public static void main(String args[]) {
-		// For testing only...
-//		BitTorrentStatus.loadPeerStatusFromConfig();
-//		PeerStatus peerState = new PeerStatus();
-//		FileOps fileHandler = new FileOps("1001");
-//		fileHandler.createFilesAndDirectories();
-//		peerState.assignFilePieceIndexMap(fileHandler.divideFile());
-//		fileHandler.combinePiecesAndOutputFile(peerState.receiveFilePieceIndexMap());
+
 	}
 }

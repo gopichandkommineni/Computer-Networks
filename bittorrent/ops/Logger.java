@@ -13,10 +13,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-/***
- * Logger utility class designed as Singleton to
- * avoid concurrency issues
- */
+/*
+  A singleton Logger class is created
+   to overcome concurrency problems
+*/
 public class Logger {
 
 	private static Map<String, Logger> logMap = new HashMap<>();
@@ -34,9 +34,9 @@ public class Logger {
 		return logMap.get(pId);
 	}
 
-	/**
-	 * Constructor: Creates directories for logging
-	 * and initializes PrintWriter
+	/*
+	  constructor for Creating file directories to log
+	  and instantiate output writer
 	 */
 	private Logger(String pId) {
 		try {
@@ -50,6 +50,7 @@ public class Logger {
 		}
 	}
 
+	//creating peer log file directory
 	private File createPeerLogDirectory(String pId) throws Exception{
 
 		String filePath = BitTorrentStatus.findPathOfLogFile() + pId
@@ -68,6 +69,7 @@ public class Logger {
 		outputWriter = new PrintWriter(fileOutStream, true);
 	}
 
+	// fetching time stamp
 	private String fetchTimeStamp() {
 
 		Timestamp ts = new Timestamp(System.currentTimeMillis());
@@ -81,6 +83,7 @@ public class Logger {
 		}
 	}
 
+	// log for receiving have message
 	public void receivedHaveMsg(String fromPId, int pieceIndx) {
 
 		outputFile(fetchTimeStamp()
@@ -93,7 +96,7 @@ public class Logger {
 	}
 
 
-
+	// Log the connection among peers
 	public void establishingConnectionTo(String toPId) {
 		outputFile(fetchTimeStamp()
 				+ ": Peer "
@@ -103,6 +106,8 @@ public class Logger {
 				+ ".");
 	}
 
+
+	// Log to get connected by peerId
 	public void establishingConnectionFrom(String fromPId) {
 		outputFile(fetchTimeStamp()
 				+ ": Peer "
@@ -112,6 +117,7 @@ public class Logger {
 				+ ".");
 	}
 
+	// log for changing preferred neighbours
 	public void preferredNeighborsChange(Map<String, String> preferredNeighbors) {
 
 		StringBuilder msg = new StringBuilder();
@@ -131,7 +137,7 @@ public class Logger {
 		outputFile(msg.toString() + "].");
 	}
 
-
+	// log for changing optimistically unchoked neighbour
 	public void optimisticallyUnchokedNeighborChange(String unchokedNeighbor) {
 
 		outputFile(fetchTimeStamp()
@@ -142,6 +148,7 @@ public class Logger {
 				+ ".");
 	}
 
+	// log for unchoked peer
 	public void unchoked(String pId1) {
 
 		outputFile(fetchTimeStamp()
@@ -152,6 +159,7 @@ public class Logger {
 				+ ".");
 	}
 
+	// log for choked peer
 	public void choked(String id) {
 
 		outputFile(fetchTimeStamp()
@@ -162,7 +170,7 @@ public class Logger {
 				+ ".");
 	}
 
-
+	//log for receiving interested message
 	public void receivedInterestedMsg(String id) {
 
 		outputFile(fetchTimeStamp()
@@ -173,7 +181,7 @@ public class Logger {
 				+ ".");
 	}
 
-
+	// log for receiving not Interested message
 	public void receivedNotInterestedMsg(String id) {
 
 		outputFile(fetchTimeStamp()
@@ -184,7 +192,7 @@ public class Logger {
 				+ ".");
 	}
 
-
+	//log for downloading a particular piece
 	public void pieceDownloadCompleted(String id, int pieceIndx, int totalPieces) {
 
 		outputFile(fetchTimeStamp()
@@ -200,6 +208,7 @@ public class Logger {
 
 	}
 
+	// log for complete file download
 	public void fileDownloadCompleted() {
 
 		outputFile(fetchTimeStamp()
